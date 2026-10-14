@@ -166,6 +166,13 @@ export default function DataUploader({ onUploadSuccess }: { onUploadSuccess: (da
           <div className={styles.sampleButtons}>
             <button 
               className={styles.sampleBtn}
+              onClick={() => handleSampleClick('Telematicsdata.csv', 'Telematicsdata.csv')}
+              disabled={isUploading}
+            >
+              <Sparkles size={16} color="#ec4899" /> Telematics Data Log
+            </button>
+            <button 
+              className={styles.sampleBtn}
               onClick={() => handleSampleClick('sample_vehicle_telemetry.csv', 'standard_telemetry.csv')}
               disabled={isUploading}
             >
