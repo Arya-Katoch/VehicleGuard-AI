@@ -17,6 +17,7 @@ import VehicleSensorHotspots from './VehicleSensorHotspots';
 import ReportDeliveryForm, { DeliveryContactInfo } from './ReportDeliveryForm';
 import { playSampleClickTone, playProcessingChime } from '../utils/audioFx';
 import styles from './DataUploader.module.css';
+import { API_BASE_URL } from '../utils/apiConfig';
 
 interface DataUploaderProps {
   onUploadSuccess: (data: any) => void;
@@ -82,7 +83,7 @@ export default function DataUploader({ onUploadSuccess }: DataUploaderProps) {
     }
 
     try {
-      const response = await axios.post('http://localhost:8000/api/upload', formData, {
+      const response = await axios.post(`${API_BASE_URL}/api/upload`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -113,7 +114,7 @@ export default function DataUploader({ onUploadSuccess }: DataUploaderProps) {
         formData.append('delivery_contact', JSON.stringify(deliveryInfo));
       }
 
-      const response = await axios.post('http://localhost:8000/api/upload', formData, {
+      const response = await axios.post(`${API_BASE_URL}/api/upload`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

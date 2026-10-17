@@ -9,6 +9,7 @@ import HistoricalAnalytics from './HistoricalAnalytics';
 import ModelComparison from './ModelComparison';
 import { Activity, CheckCircle2, Brain, BarChart3, Cpu, Radio, ArrowLeft } from 'lucide-react';
 import styles from '../app/page.module.css';
+import { API_BASE_URL } from '../utils/apiConfig';
 
 export default function Dashboard({ sessionId, onBack }: { sessionId: number; onBack?: () => void }) {
   const [activeTab, setActiveTab] = useState<'live' | 'intelligence' | 'analytics' | 'models'>('live');
@@ -29,8 +30,8 @@ export default function Dashboard({ sessionId, onBack }: { sessionId: number; on
   const fetchAnalyticsAndModels = async () => {
     try {
       const [analyticsRes, modelsRes] = await Promise.all([
-        axios.get(`http://localhost:8000/api/sessions/${sessionId}/analytics`),
-        axios.get(`http://localhost:8000/api/sessions/${sessionId}/models`)
+        axios.get(`${API_BASE_URL}/api/sessions/${sessionId}/analytics`),
+        axios.get(`${API_BASE_URL}/api/sessions/${sessionId}/models`)
       ]);
       setAnalyticsData(analyticsRes.data);
       setModelData(modelsRes.data);
@@ -48,7 +49,7 @@ export default function Dashboard({ sessionId, onBack }: { sessionId: number; on
     setAnomaliesIntelligenceList([]);
     setHealthScore(100);
 
-    eventSourceRef.current = new EventSource(`http://localhost:8000/api/stream/${sessionId}`);
+    eventSourceRef.current = new EventSource(`${API_BASE_URL}/api/stream/${sessionId}`);
 
     eventSourceRef.current.onmessage = (event) => {
       try {

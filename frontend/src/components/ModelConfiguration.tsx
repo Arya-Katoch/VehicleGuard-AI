@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Settings, RefreshCw, CheckCircle, AlertCircle } from 'lucide-react';
 import styles from './ModelComparison.module.css';
+import { API_BASE_URL } from '../utils/apiConfig';
 
 interface ModelConfig {
   iso_forest: {
@@ -69,7 +70,7 @@ export default function ModelConfiguration({
     setIsRetraining(true);
     setStatusMsg(null);
     try {
-      const res = await axios.post(`http://localhost:8000/api/sessions/${sessionId}/models/retrain`, config);
+      const res = await axios.post(`${API_BASE_URL}/api/sessions/${sessionId}/models/retrain`, config);
       setStatusMsg({ type: 'success', text: res.data.message || 'Models retrained successfully!' });
       if (onRetrainSuccess) {
         onRetrainSuccess(res.data);
