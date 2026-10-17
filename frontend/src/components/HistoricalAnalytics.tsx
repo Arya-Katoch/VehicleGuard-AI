@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import {
   AreaChart, Area, BarChart, Bar, PieChart, Pie, Cell,
   XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend
@@ -64,12 +64,22 @@ export default function HistoricalAnalytics({ analytics }: { analytics: Analytic
     { name: 'Only SVM', count: dist.only_svm || 0, fill: '#3b82f6' }
   ];
 
+  const [showAllFeatures, setShowAllFeatures] = useState(false);
+
   // Most affected features data
-  const affectedData = (analytics.most_affected_features || []).map(item => ({
-    name: item.feature.replace('_', ' ').toUpperCase(),
+  const rawAffected = analytics.most_affected_features || [];
+  const displayFeatures = showAllFeatures ? rawAffected : rawAffected.slice(0, 7);
+  const affectedData = displayFeatures.map(item => ({
+    fullName: item.feature.replace(/_/g, ' ').toUpperCase(),
+    name: item.feature.replace(/_/g, ' ').toUpperCase(),
     anomalies: item.count,
     avgZ: item.avg_z_score
   }));
+
+  const formatYAxisTick = (text: string) => {
+    if (!text) return '';
+    return text.length > 17 ? `${text.slice(0, 15)}…` : text;
+  };
 
   // Timeline & Frequency trend data
   const timelineData = (analytics.anomalies_over_time || []).map((item, idx) => ({
@@ -176,22 +186,80 @@ export default function HistoricalAnalytics({ analytics }: { analytics: Analytic
         </div>
 
         {/* Viz 3: Most Affected Features */}
-        <div className={`glass-panel ${styles.chartCard}`}>
+        <div className={`glass-panel ${styles.chartCard} ${showAllFeatures ? styles.chartCardExpanded : ''}`}>
           <div className={styles.chartTitle}>
-            <span><Activity size={18} style={{ display: 'inline', marginRight: '6px', color: '#ec4899' }} /> Most Affected Features</span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <Activity size={18} style={{ color: '#ec4899' }} />
+              <span>Most Affected Features</span>
+            </div>
+            {rawAffected.length > 7 && (
+              <div className={styles.toggleGroup}>
+                <button
+                  type="button"
+                  className={`${styles.togglePill} ${!showAllFeatures ? styles.togglePillActive : ''}`}
+                  onClick={() => setShowAllFeatures(false)}
+                  title="Show Top 7 most affected features"
+                >
+                  Top 7
+                </button>
+                <button
+                  type="button"
+                  className={`${styles.togglePill} ${showAllFeatures ? styles.togglePillActive : ''}`}
+                  onClick={() => setShowAllFeatures(true)}
+                  title={`Show all ${rawAffected.length} features`}
+                >
+                  All ({rawAffected.length})
+                </button>
+              </div>
+            )}
           </div>
-          <div style={{ flex: 1, minHeight: 0 }}>
+          <div className={styles.scrollableChartWrapper} style={{ height: showAllFeatures ? Math.max(300, affectedData.length * 36) : 280 }}>
             {affectedData.length === 0 ? (
               <p className={styles.empty}>No anomalous feature deviations.</p>
             ) : (
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={affectedData} layout="vertical" margin={{ top: 5, right: 30, left: 40, bottom: 5 }}>
+                <BarChart data={affectedData} layout="vertical" margin={{ top: 5, right: 30, left: 15, bottom: 5 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                   <XAxis type="number" stroke="#94a3b8" />
-                  <YAxis type="category" dataKey="name" stroke="#94a3b8" width={100} />
-                  <Tooltip contentStyle={{ backgroundColor: 'rgba(15, 23, 42, 0.95)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '8px' }} />
+                  <YAxis
+                    type="category"
+                    dataKey="name"
+                    stroke="#94a3b8"
+                    width={145}
+                    interval={0}
+                    tickFormatter={formatYAxisTick}
+                    tick={{ fontSize: 11, fill: '#cbd5e1' }}
+                  />
+                  <Tooltip
+                    content={({ active, payload }) => {
+                      if (active && payload && payload.length) {
+                        const d = payload[0].payload;
+                        return (
+                          <div style={{
+                            backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                            border: '1px solid rgba(236, 72, 153, 0.4)',
+                            borderRadius: '8px',
+                            padding: '0.6rem 0.9rem',
+                            boxShadow: '0 8px 24px rgba(0,0,0,0.5)',
+                            fontSize: '0.82rem',
+                          }}>
+                            <div style={{ fontWeight: 700, color: '#f8fafc', marginBottom: '0.3rem' }}>
+                              {d.fullName}
+                            </div>
+                            <div style={{ color: '#ec4899', fontWeight: 600 }}>
+                              Anomaly Count: {d.anomalies}
+                            </div>
+                            <div style={{ color: '#94a3b8', fontSize: '0.75rem', marginTop: '0.15rem' }}>
+                              Avg Deviation: +{d.avgZ} σ
+                            </div>
+                          </div>
+                        );
+                      }
+                      return null;
+                    }}
+                  />
                   <Legend />
-                  <Bar dataKey="anomalies" name="Anomaly Count" fill="#ec4899" radius={[0, 4, 4, 0]} />
+                  <Bar dataKey="anomalies" name="Anomaly Count" fill="#ec4899" radius={[0, 4, 4, 0]} barSize={18} />
                 </BarChart>
               </ResponsiveContainer>
             )}
@@ -205,9 +273,17 @@ export default function HistoricalAnalytics({ analytics }: { analytics: Analytic
           </div>
           <div style={{ flex: 1, minHeight: 0 }}>
             <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={agreementBarData} margin={{ top: 10, right: 20, left: 0, bottom: 20 }}>
+              <BarChart data={agreementBarData} margin={{ top: 10, right: 20, left: 0, bottom: 35 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                <XAxis dataKey="name" stroke="#94a3b8" angle={-15} textAnchor="end" interval={0} style={{ fontSize: '0.75rem' }} />
+                <XAxis
+                  dataKey="name"
+                  stroke="#94a3b8"
+                  angle={-30}
+                  textAnchor="end"
+                  interval={0}
+                  height={45}
+                  tick={{ fontSize: 10, fill: '#cbd5e1' }}
+                />
                 <YAxis stroke="#94a3b8" />
                 <Tooltip contentStyle={{ backgroundColor: 'rgba(15, 23, 42, 0.95)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '8px' }} />
                 <Bar dataKey="count" name="Records Count" fill="#3b82f6" radius={[4, 4, 0, 0]}>

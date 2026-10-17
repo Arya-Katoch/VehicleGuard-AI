@@ -1,0 +1,32 @@
+{
+  "session_id": 41,
+  "summary": {
+    "raw_records": 120,
+    "processed_records": 120,
+    "columns_detected": 6,
+    "columns_mapped": {
+      "time": "timestamp",
+      "VehSpd_kmh": "speed",
+      "EngineRPM": "rpm",
+      "CoolantTemp": "coolant_temp",
+      "EngLoad": "engine_load",
+      "Throttle_Pos": "throttle"
+    },
+    "missing_values_handled": 0,
+    "duplicates_handled": 0,
+    "features_generated": [
+      "acceleration",
+      "rpm_change"
+    ]
+  },
+  "analytics_summary": {
+    "total_records": 120,
+    "total_anomalies": 14,
+    "anomaly_rate_pct": 11.67,
+    "strong_anomalies": 0,
+    "consensus_anomalies": 7,
+    "weak_anomalies": 7,
+    "total_episodes": 7
+  },
+  "episodes_count": 7
+}

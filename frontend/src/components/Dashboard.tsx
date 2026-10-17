@@ -7,10 +7,10 @@ import AnomalyTimeline from './AnomalyTimeline';
 import AnomalyIntelligence from './AnomalyIntelligence';
 import HistoricalAnalytics from './HistoricalAnalytics';
 import ModelComparison from './ModelComparison';
-import { Activity, CheckCircle2, Brain, BarChart3, Cpu, Radio } from 'lucide-react';
+import { Activity, CheckCircle2, Brain, BarChart3, Cpu, Radio, ArrowLeft } from 'lucide-react';
 import styles from '../app/page.module.css';
 
-export default function Dashboard({ sessionId }: { sessionId: number }) {
+export default function Dashboard({ sessionId, onBack }: { sessionId: number; onBack?: () => void }) {
   const [activeTab, setActiveTab] = useState<'live' | 'intelligence' | 'analytics' | 'models'>('live');
   const [telemetryData, setTelemetryData] = useState<any[]>([]);
   const [events, setEvents] = useState<any[]>([]);
@@ -129,32 +129,47 @@ export default function Dashboard({ sessionId }: { sessionId: number }) {
 
   return (
     <div>
-      {/* Sub-Navigation Tabs */}
-      <div className={styles.tabNav}>
-        <button
-          className={`${styles.tabBtn} ${activeTab === 'live' ? styles.activeTab : ''}`}
-          onClick={() => setActiveTab('live')}
-        >
-          <Radio size={16} /> Live Monitoring
-        </button>
-        <button
-          className={`${styles.tabBtn} ${activeTab === 'intelligence' ? styles.activeTab : ''}`}
-          onClick={() => setActiveTab('intelligence')}
-        >
-          <Brain size={16} /> Anomaly Intelligence
-        </button>
-        <button
-          className={`${styles.tabBtn} ${activeTab === 'analytics' ? styles.activeTab : ''}`}
-          onClick={() => setActiveTab('analytics')}
-        >
-          <BarChart3 size={16} /> Historical Analytics
-        </button>
-        <button
-          className={`${styles.tabBtn} ${activeTab === 'models' ? styles.activeTab : ''}`}
-          onClick={() => setActiveTab('models')}
-        >
-          <Cpu size={16} /> Model Intelligence & Config
-        </button>
+      {/* Sub-Navigation Tabs & In-Dashboard Back Navigation */}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
+        <div className={styles.tabNav} style={{ marginBottom: 0 }}>
+          <button
+            className={`${styles.tabBtn} ${activeTab === 'live' ? styles.activeTab : ''}`}
+            onClick={() => setActiveTab('live')}
+          >
+            <Radio size={16} /> Live Monitoring
+          </button>
+          <button
+            className={`${styles.tabBtn} ${activeTab === 'intelligence' ? styles.activeTab : ''}`}
+            onClick={() => setActiveTab('intelligence')}
+          >
+            <Brain size={16} /> Anomaly Intelligence
+          </button>
+          <button
+            className={`${styles.tabBtn} ${activeTab === 'analytics' ? styles.activeTab : ''}`}
+            onClick={() => setActiveTab('analytics')}
+          >
+            <BarChart3 size={16} /> Historical Analytics
+          </button>
+          <button
+            className={`${styles.tabBtn} ${activeTab === 'models' ? styles.activeTab : ''}`}
+            onClick={() => setActiveTab('models')}
+          >
+            <Cpu size={16} /> Model Intelligence & Config
+          </button>
+        </div>
+
+        {onBack && (
+          <button
+            className={styles.backBtn}
+            onClick={onBack}
+            id="dashboard-back-btn"
+            title="Go back to Step 2: AI Standardization"
+            type="button"
+          >
+            <ArrowLeft size={16} />
+            <span>Back to Standardization</span>
+          </button>
+        )}
       </div>
 
       {/* Tab 1: Live Monitoring */}

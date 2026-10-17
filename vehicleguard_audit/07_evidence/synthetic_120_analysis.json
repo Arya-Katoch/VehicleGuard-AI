@@ -1,0 +1,1189 @@
+{
+  "summary_stats": {
+    "total_records": 120,
+    "total_anomalies": 14,
+    "anomaly_rate_pct": 11.67,
+    "strong_anomalies": 0,
+    "consensus_anomalies": 7,
+    "weak_anomalies": 7,
+    "total_episodes": 7
+  },
+  "episodes": [
+    {
+      "episode_id": "EP-001",
+      "episode_number": 1,
+      "start_time": 3.5e-08,
+      "end_time": 3.8e-08,
+      "duration_seconds": 0.9,
+      "record_count": 3,
+      "severity": "consensus_anomaly",
+      "peak_confidence": 85.0,
+      "affected_features": [
+        "rpm",
+        "rpm_change"
+      ],
+      "peak_metrics": {
+        "rpm": 4910.0,
+        "rpm_change": 2241.0
+      },
+      "normal_ranges": {
+        "rpm": {
+          "q25": 2416.75,
+          "q75": 3397.5,
+          "min": 2068.0,
+          "max": 5079.0,
+          "median": 2964.5
+        },
+        "rpm_change": {
+          "q25": -90.25,
+          "q75": 103.0,
+          "min": -2589.0,
+          "max": 2241.0,
+          "median": 6.5
+        }
+      }
+    },
+    {
+      "episode_id": "EP-002",
+      "episode_number": 2,
+      "start_time": 4.4e-08,
+      "end_time": 4.5e-08,
+      "duration_seconds": 0.6,
+      "record_count": 2,
+      "severity": "weak_anomaly",
+      "peak_confidence": 50.0,
+      "affected_features": [
+        "throttle"
+      ],
+      "peak_metrics": {
+        "throttle": 20.3
+      },
+      "normal_ranges": {
+        "throttle": {
+          "q25": 25.77,
+          "q75": 35.85,
+          "min": 18.8,
+          "max": 41.6,
+          "median": 30.35
+        }
+      }
+    },
+    {
+      "episode_id": "EP-003",
+      "episode_number": 3,
+      "start_time": 4.9e-08,
+      "end_time": 4.9e-08,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 50.0,
+      "affected_features": [
+        "throttle"
+      ],
+      "peak_metrics": {
+        "throttle": 20.6
+      },
+      "normal_ranges": {
+        "throttle": {
+          "q25": 25.77,
+          "q75": 35.85,
+          "min": 18.8,
+          "max": 41.6,
+          "median": 30.35
+        }
+      }
+    },
+    {
+      "episode_id": "EP-004",
+      "episode_number": 4,
+      "start_time": 7.1e-08,
+      "end_time": 7.4e-08,
+      "duration_seconds": 0.9,
+      "record_count": 3,
+      "severity": "consensus_anomaly",
+      "peak_confidence": 82.2,
+      "affected_features": [
+        "coolant_temp"
+      ],
+      "peak_metrics": {
+        "coolant_temp": 128.1
+      },
+      "normal_ranges": {
+        "coolant_temp": {
+          "q25": 87.97,
+          "q75": 94.33,
+          "min": 84.6,
+          "max": 128.1,
+          "median": 91.1
+        }
+      }
+    },
+    {
+      "episode_id": "EP-005",
+      "episode_number": 5,
+      "start_time": 9.5e-08,
+      "end_time": 9.7e-08,
+      "duration_seconds": 0.9,
+      "record_count": 3,
+      "severity": "consensus_anomaly",
+      "peak_confidence": 85.0,
+      "affected_features": [
+        "acceleration",
+        "engine_load"
+      ],
+      "peak_metrics": {
+        "acceleration": 20.92,
+        "engine_load": 83.4
+      },
+      "normal_ranges": {
+        "acceleration": {
+          "q25": -1.81,
+          "q75": 2.19,
+          "min": -24.6,
+          "max": 20.92,
+          "median": 0.0
+        },
+        "engine_load": {
+          "q25": 33.42,
+          "q75": 46.48,
+          "min": 25.6,
+          "max": 83.4,
+          "median": 41.55
+        }
+      }
+    },
+    {
+      "episode_id": "EP-006",
+      "episode_number": 6,
+      "start_time": 1.03e-07,
+      "end_time": 1.03e-07,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 50.0,
+      "affected_features": [
+        "rpm"
+      ],
+      "peak_metrics": {
+        "rpm": 2068.0
+      },
+      "normal_ranges": {
+        "rpm": {
+          "q25": 2416.75,
+          "q75": 3397.5,
+          "min": 2068.0,
+          "max": 5079.0,
+          "median": 2964.5
+        }
+      }
+    },
+    {
+      "episode_id": "EP-007",
+      "episode_number": 7,
+      "start_time": 1.11e-07,
+      "end_time": 1.11e-07,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 50.0,
+      "affected_features": [
+        "engine_load"
+      ],
+      "peak_metrics": {
+        "engine_load": 25.6
+      },
+      "normal_ranges": {
+        "engine_load": {
+          "q25": 33.42,
+          "q75": 46.48,
+          "min": 25.6,
+          "max": 83.4,
+          "median": 41.55
+        }
+      }
+    }
+  ],
+  "model_comparison": {
+    "isolation_forest": {
+      "anomalies_detected": 6,
+      "normal_detected": 114,
+      "consensus_agreement_pct": 97.5,
+      "runtime_ms": 180.89,
+      "parameters": {}
+    },
+    "lof": {
+      "anomalies_detected": 5,
+      "normal_detected": 115,
+      "consensus_agreement_pct": 98.3,
+      "runtime_ms": 8.3,
+      "parameters": {
+        "n_neighbors": 20,
+        "contamination": 0.05,
+        "metric": "minkowski"
+      }
+    },
+    "ocsvm": {
+      "anomalies_detected": 10,
+      "normal_detected": 110,
+      "consensus_agreement_pct": 92.5,
+      "runtime_ms": 0.0,
+      "parameters": {
+        "kernel": "rbf",
+        "nu": 0.05,
+        "gamma": "scale"
+      }
+    }
+  },
+  "model_agreement_distribution": {
+    "all_3_models": 0,
+    "if_and_lof": 3,
+    "if_and_svm": 2,
+    "lof_and_svm": 2,
+    "only_if": 1,
+    "only_lof": 0,
+    "only_svm": 6,
+    "normal": 106
+  },
+  "most_affected_features": [
+    {
+      "feature": "coolant_temp",
+      "count": 3,
+      "avg_z_score": 4.36
+    },
+    {
+      "feature": "throttle",
+      "count": 3,
+      "avg_z_score": 1.76
+    },
+    {
+      "feature": "rpm",
+      "count": 2,
+      "avg_z_score": 2.34
+    },
+    {
+      "feature": "engine_load",
+      "count": 2,
+      "avg_z_score": 3.05
+    },
+    {
+      "feature": "acceleration",
+      "count": 2,
+      "avg_z_score": 5.44
+    },
+    {
+      "feature": "rpm_change",
+      "count": 2,
+      "avg_z_score": 7.16
+    }
+  ],
+  "anomalies_over_time": [
+    {
+      "timestamp": 0.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.96
+    },
+    {
+      "timestamp": 1e-09,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.91
+    },
+    {
+      "timestamp": 2e-09,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.87
+    },
+    {
+      "timestamp": 3e-09,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.91
+    },
+    {
+      "timestamp": 4e-09,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.94
+    },
+    {
+      "timestamp": 5e-09,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.88
+    },
+    {
+      "timestamp": 6e-09,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.29
+    },
+    {
+      "timestamp": 7e-09,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.05
+    },
+    {
+      "timestamp": 8e-09,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.52
+    },
+    {
+      "timestamp": 9e-09,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.48
+    },
+    {
+      "timestamp": 1e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.15
+    },
+    {
+      "timestamp": 1.1e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.67
+    },
+    {
+      "timestamp": 1.2e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.39
+    },
+    {
+      "timestamp": 1.3e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.1
+    },
+    {
+      "timestamp": 1.4e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 1.5e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.46
+    },
+    {
+      "timestamp": 1.6e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.24
+    },
+    {
+      "timestamp": 1.7e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.39
+    },
+    {
+      "timestamp": 1.8e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.49
+    },
+    {
+      "timestamp": 1.9e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.07
+    },
+    {
+      "timestamp": 2e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.67
+    },
+    {
+      "timestamp": 2.1e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.69
+    },
+    {
+      "timestamp": 2.2e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.03
+    },
+    {
+      "timestamp": 2.3e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.08
+    },
+    {
+      "timestamp": 2.4e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.73
+    },
+    {
+      "timestamp": 2.5e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.7
+    },
+    {
+      "timestamp": 2.6e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.06
+    },
+    {
+      "timestamp": 2.7e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.84
+    },
+    {
+      "timestamp": 2.8e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.96
+    },
+    {
+      "timestamp": 2.9e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.54
+    },
+    {
+      "timestamp": 3e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.65
+    },
+    {
+      "timestamp": 3.1e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.67
+    },
+    {
+      "timestamp": 3.2e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.39
+    },
+    {
+      "timestamp": 3.3e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.99
+    },
+    {
+      "timestamp": 3.4e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.6
+    },
+    {
+      "timestamp": 3.5e-08,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 6.65
+    },
+    {
+      "timestamp": 3.6e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.63
+    },
+    {
+      "timestamp": 3.7e-08,
+      "votes": 1,
+      "confidence": 53.5,
+      "is_anomaly": 1,
+      "z_score": 3.16
+    },
+    {
+      "timestamp": 3.8e-08,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 7.68
+    },
+    {
+      "timestamp": 3.9e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.06
+    },
+    {
+      "timestamp": 4e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.55
+    },
+    {
+      "timestamp": 4.1e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.25
+    },
+    {
+      "timestamp": 4.2e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.43
+    },
+    {
+      "timestamp": 4.3e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.39
+    },
+    {
+      "timestamp": 4.4e-08,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.69
+    },
+    {
+      "timestamp": 4.5e-08,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.94
+    },
+    {
+      "timestamp": 4.6e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.82
+    },
+    {
+      "timestamp": 4.7e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.13
+    },
+    {
+      "timestamp": 4.8e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.21
+    },
+    {
+      "timestamp": 4.9e-08,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.64
+    },
+    {
+      "timestamp": 5e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.25
+    },
+    {
+      "timestamp": 5.1e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.56
+    },
+    {
+      "timestamp": 5.2e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.41
+    },
+    {
+      "timestamp": 5.3e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.09
+    },
+    {
+      "timestamp": 5.4e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.75
+    },
+    {
+      "timestamp": 5.5e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.72
+    },
+    {
+      "timestamp": 5.6e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.81
+    },
+    {
+      "timestamp": 5.7e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.73
+    },
+    {
+      "timestamp": 5.8e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.8
+    },
+    {
+      "timestamp": 5.9e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.81
+    },
+    {
+      "timestamp": 6e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.56
+    },
+    {
+      "timestamp": 6.1e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.64
+    },
+    {
+      "timestamp": 6.2e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.43
+    },
+    {
+      "timestamp": 6.3e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.84
+    },
+    {
+      "timestamp": 6.4e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.42
+    },
+    {
+      "timestamp": 6.5e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.05
+    },
+    {
+      "timestamp": 6.6e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.07
+    },
+    {
+      "timestamp": 6.7e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.13
+    },
+    {
+      "timestamp": 6.8e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.25
+    },
+    {
+      "timestamp": 6.9e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.09
+    },
+    {
+      "timestamp": 7e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.25
+    },
+    {
+      "timestamp": 7.1e-08,
+      "votes": 1,
+      "confidence": 57.0,
+      "is_anomaly": 1,
+      "z_score": 4.34
+    },
+    {
+      "timestamp": 7.2e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.34
+    },
+    {
+      "timestamp": 7.3e-08,
+      "votes": 2,
+      "confidence": 82.0,
+      "is_anomaly": 1,
+      "z_score": 4.35
+    },
+    {
+      "timestamp": 7.4e-08,
+      "votes": 2,
+      "confidence": 82.2,
+      "is_anomaly": 1,
+      "z_score": 4.4
+    },
+    {
+      "timestamp": 7.5e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.64
+    },
+    {
+      "timestamp": 7.6e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.46
+    },
+    {
+      "timestamp": 7.7e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.29
+    },
+    {
+      "timestamp": 7.8e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.41
+    },
+    {
+      "timestamp": 7.9e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.21
+    },
+    {
+      "timestamp": 8e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.2
+    },
+    {
+      "timestamp": 8.1e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.79
+    },
+    {
+      "timestamp": 8.2e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.44
+    },
+    {
+      "timestamp": 8.3e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.34
+    },
+    {
+      "timestamp": 8.4e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.03
+    },
+    {
+      "timestamp": 8.5e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.55
+    },
+    {
+      "timestamp": 8.6e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.61
+    },
+    {
+      "timestamp": 8.7e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.77
+    },
+    {
+      "timestamp": 8.8e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.91
+    },
+    {
+      "timestamp": 8.9e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.49
+    },
+    {
+      "timestamp": 9e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.79
+    },
+    {
+      "timestamp": 9.1e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.5
+    },
+    {
+      "timestamp": 9.2e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.29
+    },
+    {
+      "timestamp": 9.3e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.57
+    },
+    {
+      "timestamp": 9.4e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.82
+    },
+    {
+      "timestamp": 9.5e-08,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 5.89
+    },
+    {
+      "timestamp": 9.6e-08,
+      "votes": 2,
+      "confidence": 82.4,
+      "is_anomaly": 1,
+      "z_score": 4.48
+    },
+    {
+      "timestamp": 9.7e-08,
+      "votes": 2,
+      "confidence": 84.0,
+      "is_anomaly": 1,
+      "z_score": 5.0
+    },
+    {
+      "timestamp": 9.8e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.47
+    },
+    {
+      "timestamp": 9.9e-08,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.41
+    },
+    {
+      "timestamp": 1e-07,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.38
+    },
+    {
+      "timestamp": 1.01e-07,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.45
+    },
+    {
+      "timestamp": 1.02e-07,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.39
+    },
+    {
+      "timestamp": 1.03e-07,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.53
+    },
+    {
+      "timestamp": 1.04e-07,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.36
+    },
+    {
+      "timestamp": 1.05e-07,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.26
+    },
+    {
+      "timestamp": 1.06e-07,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.14
+    },
+    {
+      "timestamp": 1.07e-07,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.45
+    },
+    {
+      "timestamp": 1.08e-07,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.24
+    },
+    {
+      "timestamp": 1.09e-07,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.37
+    },
+    {
+      "timestamp": 1.1e-07,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.37
+    },
+    {
+      "timestamp": 1.11e-07,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 1.12e-07,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.28
+    },
+    {
+      "timestamp": 1.13e-07,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.54
+    },
+    {
+      "timestamp": 1.14e-07,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.85
+    },
+    {
+      "timestamp": 1.15e-07,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.68
+    },
+    {
+      "timestamp": 1.16e-07,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.66
+    },
+    {
+      "timestamp": 1.17e-07,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.7
+    },
+    {
+      "timestamp": 1.18e-07,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.6
+    },
+    {
+      "timestamp": 1.19e-07,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.5
+    }
+  ],
+  "normal_ranges": {
+    "speed": {
+      "q25": 24.35,
+      "q75": 54.74,
+      "min": 5.0,
+      "max": 62.92,
+      "median": 41.0
+    },
+    "rpm": {
+      "q25": 2416.75,
+      "q75": 3397.5,
+      "min": 2068.0,
+      "max": 5079.0,
+      "median": 2964.5
+    },
+    "coolant_temp": {
+      "q25": 87.97,
+      "q75": 94.33,
+      "min": 84.6,
+      "max": 128.1,
+      "median": 91.1
+    },
+    "engine_load": {
+      "q25": 33.42,
+      "q75": 46.48,
+      "min": 25.6,
+      "max": 83.4,
+      "median": 41.55
+    },
+    "throttle": {
+      "q25": 25.77,
+      "q75": 35.85,
+      "min": 18.8,
+      "max": 41.6,
+      "median": 30.35
+    },
+    "acceleration": {
+      "q25": -1.81,
+      "q75": 2.19,
+      "min": -24.6,
+      "max": 20.92,
+      "median": 0.0
+    },
+    "rpm_change": {
+      "q25": -90.25,
+      "q75": 103.0,
+      "min": -2589.0,
+      "max": 2241.0,
+      "median": 6.5
+    }
+  },
+  "config": {
+    "iso_forest": {
+      "n_estimators": 200,
+      "contamination": 0.05,
+      "random_state": 42
+    },
+    "lof": {
+      "n_neighbors": 20,
+      "contamination": 0.05,
+      "metric": "minkowski"
+    },
+    "ocsvm": {
+      "kernel": "rbf",
+      "nu": 0.05,
+      "gamma": "scale"
+    }
+  }
+}

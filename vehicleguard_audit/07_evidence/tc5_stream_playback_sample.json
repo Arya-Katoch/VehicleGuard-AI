@@ -1,0 +1,177 @@
+[
+  {
+    "telemetry": {
+      "timestamp": 0.0,
+      "speed": 40.99,
+      "rpm": 2974.0,
+      "coolant_temp": 84.6,
+      "engine_load": 42.1,
+      "throttle": 31.1,
+      "acceleration": 0.0,
+      "rpm_change": 0.0
+    },
+    "analysis": {
+      "anomaly_id": "ano_a0406b41",
+      "timestamp": 0.0,
+      "severity": "normal",
+      "confidence": 0.0,
+      "primary_feature": "coolant_temp",
+      "z_score": 0.96,
+      "votes": 0,
+      "model_votes": 0,
+      "model_agreement": {
+        "isolation_forest": 0,
+        "lof": 0,
+        "ocsvm": 0
+      },
+      "model_breakdown": {
+        "isolation_forest": "normal",
+        "lof": "normal",
+        "ocsvm": "normal"
+      },
+      "contributing_features": [],
+      "explanation": {}
+    },
+    "progress": 0.8333333333333334
+  },
+  {
+    "telemetry": {
+      "timestamp": 1e-09,
+      "speed": 41.83,
+      "rpm": 2919.0,
+      "coolant_temp": 85.0,
+      "engine_load": 45.5,
+      "throttle": 29.8,
+      "acceleration": 0.8399999999999963,
+      "rpm_change": -55.0
+    },
+    "analysis": {
+      "anomaly_id": "ano_2a014241",
+      "timestamp": 1e-09,
+      "severity": "normal",
+      "confidence": 0.0,
+      "primary_feature": "coolant_temp",
+      "z_score": 0.91,
+      "votes": 0,
+      "model_votes": 0,
+      "model_agreement": {
+        "isolation_forest": 0,
+        "lof": 0,
+        "ocsvm": 0
+      },
+      "model_breakdown": {
+        "isolation_forest": "normal",
+        "lof": "normal",
+        "ocsvm": "normal"
+      },
+      "contributing_features": [],
+      "explanation": {}
+    },
+    "progress": 1.6666666666666667
+  },
+  {
+    "telemetry": {
+      "timestamp": 2e-09,
+      "speed": 45.49,
+      "rpm": 3162.0,
+      "coolant_temp": 85.5,
+      "engine_load": 42.4,
+      "throttle": 30.0,
+      "acceleration": 3.660000000000004,
+      "rpm_change": 243.0
+    },
+    "analysis": {
+      "anomaly_id": "ano_2ccc8125",
+      "timestamp": 2e-09,
+      "severity": "normal",
+      "confidence": 0.0,
+      "primary_feature": "acceleration",
+      "z_score": 0.87,
+      "votes": 0,
+      "model_votes": 0,
+      "model_agreement": {
+        "isolation_forest": 0,
+        "lof": 0,
+        "ocsvm": 0
+      },
+      "model_breakdown": {
+        "isolation_forest": "normal",
+        "lof": "normal",
+        "ocsvm": "normal"
+      },
+      "contributing_features": [],
+      "explanation": {}
+    },
+    "progress": 2.5
+  },
+  {
+    "telemetry": {
+      "timestamp": 3e-09,
+      "speed": 49.28,
+      "rpm": 3155.0,
+      "coolant_temp": 85.7,
+      "engine_load": 45.8,
+      "throttle": 35.1,
+      "acceleration": 3.789999999999999,
+      "rpm_change": -7.0
+    },
+    "analysis": {
+      "anomaly_id": "ano_f5d3ac9d",
+      "timestamp": 3e-09,
+      "severity": "normal",
+      "confidence": 0.0,
+      "primary_feature": "acceleration",
+      "z_score": 0.91,
+      "votes": 0,
+      "model_votes": 0,
+      "model_agreement": {
+        "isolation_forest": 0,
+        "lof": 0,
+        "ocsvm": 0
+      },
+      "model_breakdown": {
+        "isolation_forest": "normal",
+        "lof": "normal",
+        "ocsvm": "normal"
+      },
+      "contributing_features": [],
+      "explanation": {}
+    },
+    "progress": 3.3333333333333335
+  },
+  {
+    "telemetry": {
+      "timestamp": 4e-09,
+      "speed": 47.73,
+      "rpm": 3200.0,
+      "coolant_temp": 84.8,
+      "engine_load": 45.9,
+      "throttle": 32.6,
+      "acceleration": -1.5500000000000045,
+      "rpm_change": 45.0
+    },
+    "analysis": {
+      "anomaly_id": "ano_28286c9e",
+      "timestamp": 4e-09,
+      "severity": "normal",
+      "confidence": 0.0,
+      "primary_feature": "coolant_temp",
+      "z_score": 0.94,
+      "votes": 0,
+      "model_votes": 0,
+      "model_agreement": {
+        "isolation_forest": 0,
+        "lof": 0,
+        "ocsvm": 0
+      },
+      "model_breakdown": {
+        "isolation_forest": "normal",
+        "lof": "normal",
+        "ocsvm": "normal"
+      },
+      "contributing_features": [],
+      "explanation": {}
+    },
+    "progress": 4.166666666666666
+  }
+]

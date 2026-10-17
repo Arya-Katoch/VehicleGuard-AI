@@ -1,0 +1,8557 @@
+{
+  "summary_stats": {
+    "total_records": 974,
+    "total_anomalies": 122,
+    "anomaly_rate_pct": 12.53,
+    "strong_anomalies": 4,
+    "consensus_anomalies": 26,
+    "weak_anomalies": 92,
+    "total_episodes": 38
+  },
+  "episodes": [
+    {
+      "episode_id": "EP-001",
+      "episode_number": 1,
+      "start_time": 12500.0,
+      "end_time": 14247.0,
+      "duration_seconds": 1747.0,
+      "record_count": 3,
+      "severity": "weak_anomaly",
+      "peak_confidence": 53.1,
+      "affected_features": [
+        "TOWING"
+      ],
+      "peak_metrics": {
+        "TOWING": 1.0
+      },
+      "normal_ranges": {
+        "TOWING": {
+          "q25": 0.0,
+          "q75": 0.0,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-002",
+      "episode_number": 2,
+      "start_time": 17281.0,
+      "end_time": 17281.0,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 53.1,
+      "affected_features": [
+        "TOWING"
+      ],
+      "peak_metrics": {
+        "TOWING": 1.0
+      },
+      "normal_ranges": {
+        "TOWING": {
+          "q25": 0.0,
+          "q75": 0.0,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-003",
+      "episode_number": 3,
+      "start_time": 40787.0,
+      "end_time": 40848.0,
+      "duration_seconds": 61.0,
+      "record_count": 2,
+      "severity": "consensus_anomaly",
+      "peak_confidence": 85.0,
+      "affected_features": [
+        "ACCELERATION Z",
+        "CALCULATED ENGINE LOAD"
+      ],
+      "peak_metrics": {
+        "ACCELERATION Z": 3.25,
+        "CALCULATED ENGINE LOAD": 100.0
+      },
+      "normal_ranges": {
+        "ACCELERATION Z": {
+          "q25": 3.25,
+          "q75": 4.0,
+          "min": -12.5,
+          "max": 11.0,
+          "median": 3.75
+        },
+        "CALCULATED ENGINE LOAD": {
+          "q25": 5.0,
+          "q75": 35.0,
+          "min": 0.0,
+          "max": 100.0,
+          "median": 25.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-004",
+      "episode_number": 4,
+      "start_time": 41500.0,
+      "end_time": 44623.645,
+      "duration_seconds": 3123.64,
+      "record_count": 18,
+      "severity": "strong_anomaly",
+      "peak_confidence": 97.9,
+      "affected_features": [
+        "ACCELERATION Y",
+        "OXYGEN SENSOR 1 - B: SHORT TERM FUEL TRIM"
+      ],
+      "peak_metrics": {
+        "ACCELERATION Y": 8.0,
+        "OXYGEN SENSOR 1 - B: SHORT TERM FUEL TRIM": 40.0
+      },
+      "normal_ranges": {
+        "ACCELERATION Y": {
+          "q25": -9.0,
+          "q75": -8.4,
+          "min": -17.4,
+          "max": 12.0,
+          "median": -8.75
+        },
+        "OXYGEN SENSOR 1 - B: SHORT TERM FUEL TRIM": {
+          "q25": 0.0,
+          "q75": 0.0,
+          "min": 0.0,
+          "max": 40.0,
+          "median": 0.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-005",
+      "episode_number": 5,
+      "start_time": 45854.0,
+      "end_time": 45854.0,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 60.0,
+      "affected_features": [
+        "ACCELERATION X"
+      ],
+      "peak_metrics": {
+        "ACCELERATION X": 6.5
+      },
+      "normal_ranges": {
+        "ACCELERATION X": {
+          "q25": 0.1,
+          "q75": 0.7,
+          "min": -3.5,
+          "max": 6.5,
+          "median": 0.6
+        }
+      }
+    },
+    {
+      "episode_id": "EP-006",
+      "episode_number": 6,
+      "start_time": 49588.0,
+      "end_time": 49588.0,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 60.0,
+      "affected_features": [
+        "ACCELERATION X"
+      ],
+      "peak_metrics": {
+        "ACCELERATION X": 6.5
+      },
+      "normal_ranges": {
+        "ACCELERATION X": {
+          "q25": 0.1,
+          "q75": 0.7,
+          "min": -3.5,
+          "max": 6.5,
+          "median": 0.6
+        }
+      }
+    },
+    {
+      "episode_id": "EP-007",
+      "episode_number": 7,
+      "start_time": 53268.0,
+      "end_time": 53268.0,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 50.0,
+      "affected_features": [
+        "TIMING ADVANCE"
+      ],
+      "peak_metrics": {
+        "TIMING ADVANCE": -10.0
+      },
+      "normal_ranges": {
+        "TIMING ADVANCE": {
+          "q25": 0.0,
+          "q75": 20.0,
+          "min": -10.0,
+          "max": 40.0,
+          "median": 10.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-008",
+      "episode_number": 8,
+      "start_time": 58448.0,
+      "end_time": 58741.0,
+      "duration_seconds": 293.0,
+      "record_count": 4,
+      "severity": "weak_anomaly",
+      "peak_confidence": 57.4,
+      "affected_features": [
+        "EXTERNAL BATTERY"
+      ],
+      "peak_metrics": {
+        "EXTERNAL BATTERY": 12.0
+      },
+      "normal_ranges": {
+        "EXTERNAL BATTERY": {
+          "q25": 37.0,
+          "q75": 44.0,
+          "min": 8.0,
+          "max": 48.0,
+          "median": 39.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-009",
+      "episode_number": 9,
+      "start_time": 59251.0,
+      "end_time": 59251.0,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 55.7,
+      "affected_features": [
+        "EXTERNAL BATTERY"
+      ],
+      "peak_metrics": {
+        "EXTERNAL BATTERY": 12.0
+      },
+      "normal_ranges": {
+        "EXTERNAL BATTERY": {
+          "q25": 37.0,
+          "q75": 44.0,
+          "min": 8.0,
+          "max": 48.0,
+          "median": 39.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-010",
+      "episode_number": 10,
+      "start_time": 59568.0,
+      "end_time": 59920.0,
+      "duration_seconds": 352.0,
+      "record_count": 4,
+      "severity": "consensus_anomaly",
+      "peak_confidence": 85.0,
+      "affected_features": [
+        "COMMANDED THROTTLE ACTUATOR",
+        "EXTERNAL BATTERY",
+        "RELATIVE THROTTLE POSITION"
+      ],
+      "peak_metrics": {
+        "COMMANDED THROTTLE ACTUATOR": 40.0,
+        "EXTERNAL BATTERY": 11.0,
+        "RELATIVE THROTTLE POSITION": 27.0
+      },
+      "normal_ranges": {
+        "COMMANDED THROTTLE ACTUATOR": {
+          "q25": 1.0,
+          "q75": 6.0,
+          "min": 0.0,
+          "max": 40.0,
+          "median": 5.0
+        },
+        "EXTERNAL BATTERY": {
+          "q25": 37.0,
+          "q75": 44.0,
+          "min": 8.0,
+          "max": 48.0,
+          "median": 39.0
+        },
+        "RELATIVE THROTTLE POSITION": {
+          "q25": 1.0,
+          "q75": 4.0,
+          "min": 0.0,
+          "max": 29.0,
+          "median": 3.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-011",
+      "episode_number": 11,
+      "start_time": 60764.0,
+      "end_time": 61391.0,
+      "duration_seconds": 627.0,
+      "record_count": 4,
+      "severity": "weak_anomaly",
+      "peak_confidence": 56.1,
+      "affected_features": [
+        "EXTERNAL BATTERY"
+      ],
+      "peak_metrics": {
+        "EXTERNAL BATTERY": 11.0
+      },
+      "normal_ranges": {
+        "EXTERNAL BATTERY": {
+          "q25": 37.0,
+          "q75": 44.0,
+          "min": 8.0,
+          "max": 48.0,
+          "median": 39.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-012",
+      "episode_number": 12,
+      "start_time": 61984.0,
+      "end_time": 61984.0,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 55.7,
+      "affected_features": [
+        "EXTERNAL BATTERY"
+      ],
+      "peak_metrics": {
+        "EXTERNAL BATTERY": 12.0
+      },
+      "normal_ranges": {
+        "EXTERNAL BATTERY": {
+          "q25": 37.0,
+          "q75": 44.0,
+          "min": 8.0,
+          "max": 48.0,
+          "median": 39.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-013",
+      "episode_number": 13,
+      "start_time": 62625.0,
+      "end_time": 62625.0,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 59.3,
+      "affected_features": [
+        "COMMANDED THROTTLE ACTUATOR"
+      ],
+      "peak_metrics": {
+        "COMMANDED THROTTLE ACTUATOR": 32.0
+      },
+      "normal_ranges": {
+        "COMMANDED THROTTLE ACTUATOR": {
+          "q25": 1.0,
+          "q75": 6.0,
+          "min": 0.0,
+          "max": 40.0,
+          "median": 5.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-014",
+      "episode_number": 14,
+      "start_time": 124486.0,
+      "end_time": 124542.0,
+      "duration_seconds": 56.0,
+      "record_count": 2,
+      "severity": "weak_anomaly",
+      "peak_confidence": 57.8,
+      "affected_features": [
+        "CALCULATED ENGINE LOAD",
+        "COMMANDED EVAPORATIVE PURGE"
+      ],
+      "peak_metrics": {
+        "CALCULATED ENGINE LOAD": 95.0,
+        "COMMANDED EVAPORATIVE PURGE": 100.0
+      },
+      "normal_ranges": {
+        "CALCULATED ENGINE LOAD": {
+          "q25": 5.0,
+          "q75": 35.0,
+          "min": 0.0,
+          "max": 100.0,
+          "median": 25.0
+        },
+        "COMMANDED EVAPORATIVE PURGE": {
+          "q25": 0.0,
+          "q75": 10.0,
+          "min": 0.0,
+          "max": 100.0,
+          "median": 0.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-015",
+      "episode_number": 15,
+      "start_time": 125987.0,
+      "end_time": 125987.0,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 50.0,
+      "affected_features": [
+        "engine_load"
+      ],
+      "peak_metrics": {
+        "engine_load": 0.0
+      },
+      "normal_ranges": {
+        "engine_load": {
+          "q25": 30.0,
+          "q75": 60.0,
+          "min": 0.0,
+          "max": 90.0,
+          "median": 30.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-016",
+      "episode_number": 16,
+      "start_time": 141887.0,
+      "end_time": 145391.0,
+      "duration_seconds": 3504.0,
+      "record_count": 4,
+      "severity": "weak_anomaly",
+      "peak_confidence": 53.1,
+      "affected_features": [
+        "TOWING"
+      ],
+      "peak_metrics": {
+        "TOWING": 1.0
+      },
+      "normal_ranges": {
+        "TOWING": {
+          "q25": 0.0,
+          "q75": 0.0,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-017",
+      "episode_number": 17,
+      "start_time": 153466.0,
+      "end_time": 153466.0,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 60.0,
+      "affected_features": [
+        "ACCELERATION Z"
+      ],
+      "peak_metrics": {
+        "ACCELERATION Z": -12.5
+      },
+      "normal_ranges": {
+        "ACCELERATION Z": {
+          "q25": 3.25,
+          "q75": 4.0,
+          "min": -12.5,
+          "max": 11.0,
+          "median": 3.75
+        }
+      }
+    },
+    {
+      "episode_id": "EP-018",
+      "episode_number": 18,
+      "start_time": 215853.0,
+      "end_time": 224220.986,
+      "duration_seconds": 8367.99,
+      "record_count": 15,
+      "severity": "consensus_anomaly",
+      "peak_confidence": 85.0,
+      "affected_features": [
+        "AMBIENT AIR TEMPERATURE",
+        "DISTANCE TRAVELED WITH MIL ON",
+        "LONG TERM FUEL TRIM BANK 1",
+        "engine_load",
+        "rpm_change"
+      ],
+      "peak_metrics": {
+        "AMBIENT AIR TEMPERATURE": 20.0,
+        "DISTANCE TRAVELED WITH MIL ON": 1000.0,
+        "LONG TERM FUEL TRIM BANK 1": 0.0,
+        "engine_load": 30.0,
+        "rpm_change": 8990.0
+      },
+      "normal_ranges": {
+        "AMBIENT AIR TEMPERATURE": {
+          "q25": 20.0,
+          "q75": 20.0,
+          "min": 4.0,
+          "max": 20.0,
+          "median": 20.0
+        },
+        "DISTANCE TRAVELED WITH MIL ON": {
+          "q25": 0.0,
+          "q75": 0.0,
+          "min": 0.0,
+          "max": 1000.0,
+          "median": 0.0
+        },
+        "LONG TERM FUEL TRIM BANK 1": {
+          "q25": 0.0,
+          "q75": 0.0,
+          "min": -40.0,
+          "max": 10.0,
+          "median": 0.0
+        },
+        "engine_load": {
+          "q25": 30.0,
+          "q75": 60.0,
+          "min": 0.0,
+          "max": 90.0,
+          "median": 30.0
+        },
+        "rpm_change": {
+          "q25": 0.0,
+          "q75": 0.0,
+          "min": -9000.0,
+          "max": 8990.0,
+          "median": 0.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-019",
+      "episode_number": 19,
+      "start_time": 226527.0,
+      "end_time": 232259.0,
+      "duration_seconds": 5732.0,
+      "record_count": 20,
+      "severity": "consensus_anomaly",
+      "peak_confidence": 85.0,
+      "affected_features": [
+        "ACCELERATION Y",
+        "ACTUAL ENGIN - PERCENT TORQUE",
+        "DISTANCE TRAVELED WITH MIL ON",
+        "DRIVER'S DEMAND ENGIN - PERCENT TORQUE",
+        "engine_load"
+      ],
+      "peak_metrics": {
+        "ACCELERATION Y": 12.0,
+        "ACTUAL ENGIN - PERCENT TORQUE": 60.0,
+        "DISTANCE TRAVELED WITH MIL ON": 1000.0,
+        "DRIVER'S DEMAND ENGIN - PERCENT TORQUE": 100.0,
+        "engine_load": 90.0
+      },
+      "normal_ranges": {
+        "ACCELERATION Y": {
+          "q25": -9.0,
+          "q75": -8.4,
+          "min": -17.4,
+          "max": 12.0,
+          "median": -8.75
+        },
+        "ACTUAL ENGIN - PERCENT TORQUE": {
+          "q25": 60.0,
+          "q75": 60.0,
+          "min": 5.0,
+          "max": 60.0,
+          "median": 60.0
+        },
+        "DISTANCE TRAVELED WITH MIL ON": {
+          "q25": 0.0,
+          "q75": 0.0,
+          "min": 0.0,
+          "max": 1000.0,
+          "median": 0.0
+        },
+        "DRIVER'S DEMAND ENGIN - PERCENT TORQUE": {
+          "q25": 90.0,
+          "q75": 95.0,
+          "min": 5.0,
+          "max": 100.0,
+          "median": 90.0
+        },
+        "engine_load": {
+          "q25": 30.0,
+          "q75": 60.0,
+          "min": 0.0,
+          "max": 90.0,
+          "median": 30.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-020",
+      "episode_number": 20,
+      "start_time": 232859.0,
+      "end_time": 232859.0,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 60.0,
+      "affected_features": [
+        "COMMANDED THROTTLE ACTUATOR"
+      ],
+      "peak_metrics": {
+        "COMMANDED THROTTLE ACTUATOR": 40.0
+      },
+      "normal_ranges": {
+        "COMMANDED THROTTLE ACTUATOR": {
+          "q25": 1.0,
+          "q75": 6.0,
+          "min": 0.0,
+          "max": 40.0,
+          "median": 5.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-021",
+      "episode_number": 21,
+      "start_time": 236180.0,
+      "end_time": 236180.0,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 60.0,
+      "affected_features": [
+        "COMMANDED THROTTLE ACTUATOR"
+      ],
+      "peak_metrics": {
+        "COMMANDED THROTTLE ACTUATOR": 38.0
+      },
+      "normal_ranges": {
+        "COMMANDED THROTTLE ACTUATOR": {
+          "q25": 1.0,
+          "q75": 6.0,
+          "min": 0.0,
+          "max": 40.0,
+          "median": 5.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-022",
+      "episode_number": 22,
+      "start_time": 240823.0,
+      "end_time": 241655.0,
+      "duration_seconds": 832.0,
+      "record_count": 2,
+      "severity": "weak_anomaly",
+      "peak_confidence": 53.1,
+      "affected_features": [
+        "CONTROL MODULE VOLTAGE",
+        "TOWING"
+      ],
+      "peak_metrics": {
+        "CONTROL MODULE VOLTAGE": 2.0,
+        "TOWING": 1.0
+      },
+      "normal_ranges": {
+        "CONTROL MODULE VOLTAGE": {
+          "q25": 2.0,
+          "q75": 14.0,
+          "min": 2.0,
+          "max": 14.0,
+          "median": 14.0
+        },
+        "TOWING": {
+          "q25": 0.0,
+          "q75": 0.0,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-023",
+      "episode_number": 23,
+      "start_time": 310881.0,
+      "end_time": 310881.0,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 50.0,
+      "affected_features": [
+        "engine_load"
+      ],
+      "peak_metrics": {
+        "engine_load": 0.0
+      },
+      "normal_ranges": {
+        "engine_load": {
+          "q25": 30.0,
+          "q75": 60.0,
+          "min": 0.0,
+          "max": 90.0,
+          "median": 30.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-024",
+      "episode_number": 24,
+      "start_time": 314023.0,
+      "end_time": 314307.0,
+      "duration_seconds": 284.0,
+      "record_count": 2,
+      "severity": "weak_anomaly",
+      "peak_confidence": 50.0,
+      "affected_features": [
+        "CONTROL MODULE VOLTAGE",
+        "acceleration"
+      ],
+      "peak_metrics": {
+        "CONTROL MODULE VOLTAGE": 2.0,
+        "acceleration": 0.0
+      },
+      "normal_ranges": {
+        "CONTROL MODULE VOLTAGE": {
+          "q25": 2.0,
+          "q75": 14.0,
+          "min": 2.0,
+          "max": 14.0,
+          "median": 14.0
+        },
+        "acceleration": {
+          "q25": 0.0,
+          "q75": 0.0,
+          "min": -170.0,
+          "max": 174.0,
+          "median": 0.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-025",
+      "episode_number": 25,
+      "start_time": 315542.0,
+      "end_time": 315542.0,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 53.7,
+      "affected_features": [
+        "OXYGEN SENSOR 1 - B: SHORT TERM FUEL TRIM"
+      ],
+      "peak_metrics": {
+        "OXYGEN SENSOR 1 - B: SHORT TERM FUEL TRIM": 20.0
+      },
+      "normal_ranges": {
+        "OXYGEN SENSOR 1 - B: SHORT TERM FUEL TRIM": {
+          "q25": 0.0,
+          "q75": 0.0,
+          "min": 0.0,
+          "max": 40.0,
+          "median": 0.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-026",
+      "episode_number": 26,
+      "start_time": 318378.0,
+      "end_time": 319480.0,
+      "duration_seconds": 1102.0,
+      "record_count": 2,
+      "severity": "weak_anomaly",
+      "peak_confidence": 57.6,
+      "affected_features": [
+        "COMMANDED THROTTLE ACTUATOR",
+        "OXYGEN SENSOR 2 - B: SHORT TERM FUEL TRIM"
+      ],
+      "peak_metrics": {
+        "COMMANDED THROTTLE ACTUATOR": 29.0,
+        "OXYGEN SENSOR 2 - B: SHORT TERM FUEL TRIM": 100.0
+      },
+      "normal_ranges": {
+        "COMMANDED THROTTLE ACTUATOR": {
+          "q25": 1.0,
+          "q75": 6.0,
+          "min": 0.0,
+          "max": 40.0,
+          "median": 5.0
+        },
+        "OXYGEN SENSOR 2 - B: SHORT TERM FUEL TRIM": {
+          "q25": 20.0,
+          "q75": 100.0,
+          "min": 20.0,
+          "max": 100.0,
+          "median": 100.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-027",
+      "episode_number": 27,
+      "start_time": 322491.0,
+      "end_time": 324334.0,
+      "duration_seconds": 1843.0,
+      "record_count": 3,
+      "severity": "weak_anomaly",
+      "peak_confidence": 50.0,
+      "affected_features": [
+        "CONTROL MODULE VOLTAGE",
+        "OXYGEN SENSOR 2 - B: SHORT TERM FUEL TRIM"
+      ],
+      "peak_metrics": {
+        "CONTROL MODULE VOLTAGE": 14.0,
+        "OXYGEN SENSOR 2 - B: SHORT TERM FUEL TRIM": 20.0
+      },
+      "normal_ranges": {
+        "CONTROL MODULE VOLTAGE": {
+          "q25": 2.0,
+          "q75": 14.0,
+          "min": 2.0,
+          "max": 14.0,
+          "median": 14.0
+        },
+        "OXYGEN SENSOR 2 - B: SHORT TERM FUEL TRIM": {
+          "q25": 20.0,
+          "q75": 100.0,
+          "min": 20.0,
+          "max": 100.0,
+          "median": 100.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-028",
+      "episode_number": 28,
+      "start_time": 325270.0,
+      "end_time": 325270.0,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 50.0,
+      "affected_features": [
+        "CONTROL MODULE VOLTAGE"
+      ],
+      "peak_metrics": {
+        "CONTROL MODULE VOLTAGE": 2.0
+      },
+      "normal_ranges": {
+        "CONTROL MODULE VOLTAGE": {
+          "q25": 2.0,
+          "q75": 14.0,
+          "min": 2.0,
+          "max": 14.0,
+          "median": 14.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-029",
+      "episode_number": 29,
+      "start_time": 331567.0,
+      "end_time": 331567.0,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 50.0,
+      "affected_features": [
+        "PIDNameNotAvailable"
+      ],
+      "peak_metrics": {
+        "PIDNameNotAvailable": 38.0
+      },
+      "normal_ranges": {
+        "PIDNameNotAvailable": {
+          "q25": 15.0,
+          "q75": 38.0,
+          "min": 15.0,
+          "max": 38.0,
+          "median": 16.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-030",
+      "episode_number": 30,
+      "start_time": 332395.0,
+      "end_time": 332395.0,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 53.1,
+      "affected_features": [
+        "TOWING"
+      ],
+      "peak_metrics": {
+        "TOWING": 1.0
+      },
+      "normal_ranges": {
+        "TOWING": {
+          "q25": 0.0,
+          "q75": 0.0,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-031",
+      "episode_number": 31,
+      "start_time": 398469.0,
+      "end_time": 398469.0,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 52.7,
+      "affected_features": [
+        "speed"
+      ],
+      "peak_metrics": {
+        "speed": 69.0
+      },
+      "normal_ranges": {
+        "speed": {
+          "q25": 0.0,
+          "q75": 10.75,
+          "min": 0.0,
+          "max": 175.0,
+          "median": 1.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-032",
+      "episode_number": 32,
+      "start_time": 399881.0,
+      "end_time": 400333.0,
+      "duration_seconds": 452.0,
+      "record_count": 3,
+      "severity": "consensus_anomaly",
+      "peak_confidence": 78.1,
+      "affected_features": [
+        "TOWING",
+        "engine_load"
+      ],
+      "peak_metrics": {
+        "TOWING": 1.0,
+        "engine_load": 30.0
+      },
+      "normal_ranges": {
+        "TOWING": {
+          "q25": 0.0,
+          "q75": 0.0,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "engine_load": {
+          "q25": 30.0,
+          "q75": 60.0,
+          "min": 0.0,
+          "max": 90.0,
+          "median": 30.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-033",
+      "episode_number": 33,
+      "start_time": 401582.0,
+      "end_time": 402469.0,
+      "duration_seconds": 887.0,
+      "record_count": 3,
+      "severity": "weak_anomaly",
+      "peak_confidence": 56.3,
+      "affected_features": [
+        "COMMANDED EVAPORATIVE PURGE",
+        "TIMING ADVANCE",
+        "acceleration"
+      ],
+      "peak_metrics": {
+        "COMMANDED EVAPORATIVE PURGE": 90.0,
+        "TIMING ADVANCE": 40.0,
+        "acceleration": 4.0
+      },
+      "normal_ranges": {
+        "COMMANDED EVAPORATIVE PURGE": {
+          "q25": 0.0,
+          "q75": 10.0,
+          "min": 0.0,
+          "max": 100.0,
+          "median": 0.0
+        },
+        "TIMING ADVANCE": {
+          "q25": 0.0,
+          "q75": 20.0,
+          "min": -10.0,
+          "max": 40.0,
+          "median": 10.0
+        },
+        "acceleration": {
+          "q25": 0.0,
+          "q75": 0.0,
+          "min": -170.0,
+          "max": 174.0,
+          "median": 0.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-034",
+      "episode_number": 34,
+      "start_time": 404823.0,
+      "end_time": 404823.0,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 58.1,
+      "affected_features": [
+        "COMMANDED THROTTLE ACTUATOR"
+      ],
+      "peak_metrics": {
+        "COMMANDED THROTTLE ACTUATOR": 30.0
+      },
+      "normal_ranges": {
+        "COMMANDED THROTTLE ACTUATOR": {
+          "q25": 1.0,
+          "q75": 6.0,
+          "min": 0.0,
+          "max": 40.0,
+          "median": 5.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-035",
+      "episode_number": 35,
+      "start_time": 407434.0,
+      "end_time": 408397.0,
+      "duration_seconds": 963.0,
+      "record_count": 3,
+      "severity": "weak_anomaly",
+      "peak_confidence": 57.8,
+      "affected_features": [
+        "COMMANDED EVAPORATIVE PURGE"
+      ],
+      "peak_metrics": {
+        "COMMANDED EVAPORATIVE PURGE": 100.0
+      },
+      "normal_ranges": {
+        "COMMANDED EVAPORATIVE PURGE": {
+          "q25": 0.0,
+          "q75": 10.0,
+          "min": 0.0,
+          "max": 100.0,
+          "median": 0.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-036",
+      "episode_number": 36,
+      "start_time": 416101.35,
+      "end_time": 416101.35,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 57.8,
+      "affected_features": [
+        "COMMANDED EVAPORATIVE PURGE"
+      ],
+      "peak_metrics": {
+        "COMMANDED EVAPORATIVE PURGE": 100.0
+      },
+      "normal_ranges": {
+        "COMMANDED EVAPORATIVE PURGE": {
+          "q25": 0.0,
+          "q75": 10.0,
+          "min": 0.0,
+          "max": 100.0,
+          "median": 0.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-037",
+      "episode_number": 37,
+      "start_time": 645051.0,
+      "end_time": 646665.0,
+      "duration_seconds": 1614.0,
+      "record_count": 8,
+      "severity": "consensus_anomaly",
+      "peak_confidence": 85.0,
+      "affected_features": [
+        "ACCELERATION Z",
+        "INTAKE MANIFOLD ABSOLUTE PRESSURE",
+        "RELATIVE THROTTLE POSITION",
+        "THROTTLE POSITION",
+        "TIMING ADVANCE"
+      ],
+      "peak_metrics": {
+        "ACCELERATION Z": 4.75,
+        "INTAKE MANIFOLD ABSOLUTE PRESSURE": 120.0,
+        "RELATIVE THROTTLE POSITION": 29.0,
+        "THROTTLE POSITION": 40.0,
+        "TIMING ADVANCE": 40.0
+      },
+      "normal_ranges": {
+        "ACCELERATION Z": {
+          "q25": 3.25,
+          "q75": 4.0,
+          "min": -12.5,
+          "max": 11.0,
+          "median": 3.75
+        },
+        "INTAKE MANIFOLD ABSOLUTE PRESSURE": {
+          "q25": 40.0,
+          "q75": 80.0,
+          "min": 0.0,
+          "max": 120.0,
+          "median": 40.0
+        },
+        "RELATIVE THROTTLE POSITION": {
+          "q25": 1.0,
+          "q75": 4.0,
+          "min": 0.0,
+          "max": 29.0,
+          "median": 3.0
+        },
+        "THROTTLE POSITION": {
+          "q25": 10.0,
+          "q75": 20.0,
+          "min": 10.0,
+          "max": 40.0,
+          "median": 10.0
+        },
+        "TIMING ADVANCE": {
+          "q25": 0.0,
+          "q75": 20.0,
+          "min": -10.0,
+          "max": 40.0,
+          "median": 10.0
+        }
+      }
+    },
+    {
+      "episode_id": "EP-038",
+      "episode_number": 38,
+      "start_time": 649213.0,
+      "end_time": 649213.0,
+      "duration_seconds": 0.3,
+      "record_count": 1,
+      "severity": "weak_anomaly",
+      "peak_confidence": 50.0,
+      "affected_features": [
+        "engine_load"
+      ],
+      "peak_metrics": {
+        "engine_load": 0.0
+      },
+      "normal_ranges": {
+        "engine_load": {
+          "q25": 30.0,
+          "q75": 60.0,
+          "min": 0.0,
+          "max": 90.0,
+          "median": 30.0
+        }
+      }
+    }
+  ],
+  "model_comparison": {
+    "isolation_forest": {
+      "anomalies_detected": 49,
+      "normal_detected": 925,
+      "consensus_agreement_pct": 97.8,
+      "runtime_ms": 197.87,
+      "parameters": {}
+    },
+    "lof": {
+      "anomalies_detected": 42,
+      "normal_detected": 932,
+      "consensus_agreement_pct": 93.6,
+      "runtime_ms": 60.43,
+      "parameters": {
+        "n_neighbors": 20,
+        "contamination": 0.05,
+        "metric": "minkowski"
+      }
+    },
+    "ocsvm": {
+      "anomalies_detected": 65,
+      "normal_detected": 909,
+      "consensus_agreement_pct": 96.4,
+      "runtime_ms": 7.51,
+      "parameters": {
+        "kernel": "rbf",
+        "nu": 0.05,
+        "gamma": "scale"
+      }
+    }
+  },
+  "model_agreement_distribution": {
+    "all_3_models": 4,
+    "if_and_lof": 0,
+    "if_and_svm": 25,
+    "lof_and_svm": 1,
+    "only_if": 20,
+    "only_lof": 37,
+    "only_svm": 35,
+    "normal": 852
+  },
+  "most_affected_features": [
+    {
+      "feature": "OXYGEN SENSOR 1 - B: SHORT TERM FUEL TRIM",
+      "count": 14,
+      "avg_z_score": 6.38
+    },
+    {
+      "feature": "EXTERNAL BATTERY",
+      "count": 11,
+      "avg_z_score": 4.01
+    },
+    {
+      "feature": "TOWING",
+      "count": 11,
+      "avg_z_score": 3.04
+    },
+    {
+      "feature": "engine_load",
+      "count": 9,
+      "avg_z_score": 1.8
+    },
+    {
+      "feature": "DRIVER'S DEMAND ENGIN - PERCENT TORQUE",
+      "count": 9,
+      "avg_z_score": 9.1
+    },
+    {
+      "feature": "ACCELERATION Y",
+      "count": 8,
+      "avg_z_score": 4.77
+    },
+    {
+      "feature": "DISTANCE TRAVELED WITH MIL ON",
+      "count": 8,
+      "avg_z_score": 10.99
+    },
+    {
+      "feature": "COMMANDED THROTTLE ACTUATOR",
+      "count": 7,
+      "avg_z_score": 5.66
+    },
+    {
+      "feature": "COMMANDED EVAPORATIVE PURGE",
+      "count": 6,
+      "avg_z_score": 4.53
+    },
+    {
+      "feature": "ACTUAL ENGIN - PERCENT TORQUE",
+      "count": 4,
+      "avg_z_score": 10.84
+    },
+    {
+      "feature": "AMBIENT AIR TEMPERATURE",
+      "count": 4,
+      "avg_z_score": 12.7
+    },
+    {
+      "feature": "CONTROL MODULE VOLTAGE",
+      "count": 4,
+      "avg_z_score": 1.68
+    },
+    {
+      "feature": "INTAKE MANIFOLD ABSOLUTE PRESSURE",
+      "count": 4,
+      "avg_z_score": 2.71
+    },
+    {
+      "feature": "ACCELERATION Z",
+      "count": 3,
+      "avg_z_score": 7.1
+    },
+    {
+      "feature": "OXYGEN SENSOR 2 - B: SHORT TERM FUEL TRIM",
+      "count": 3,
+      "avg_z_score": 1.63
+    },
+    {
+      "feature": "TIMING ADVANCE",
+      "count": 3,
+      "avg_z_score": 2.36
+    },
+    {
+      "feature": "ACCELERATION X",
+      "count": 2,
+      "avg_z_score": 5.87
+    },
+    {
+      "feature": "CALCULATED ENGINE LOAD",
+      "count": 2,
+      "avg_z_score": 3.49
+    },
+    {
+      "feature": "LONG TERM FUEL TRIM BANK 1",
+      "count": 2,
+      "avg_z_score": 9.2
+    },
+    {
+      "feature": "RELATIVE THROTTLE POSITION",
+      "count": 2,
+      "avg_z_score": 6.54
+    },
+    {
+      "feature": "acceleration",
+      "count": 2,
+      "avg_z_score": 2.46
+    },
+    {
+      "feature": "PIDNameNotAvailable",
+      "count": 1,
+      "avg_z_score": 1.37
+    },
+    {
+      "feature": "THROTTLE POSITION",
+      "count": 1,
+      "avg_z_score": 3.01
+    },
+    {
+      "feature": "speed",
+      "count": 1,
+      "avg_z_score": 2.9
+    },
+    {
+      "feature": "rpm_change",
+      "count": 1,
+      "avg_z_score": 10.56
+    }
+  ],
+  "anomalies_over_time": [
+    {
+      "timestamp": 0.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 416.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 763.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 1126.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 1571.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 2298.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 3022.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 3488.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 4133.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 4903.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 5632.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 6361.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 6882.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 7576.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 8061.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 8334.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 8678.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 8866.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 9101.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 9322.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 9699.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 10133.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 10472.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 10790.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 11046.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 11444.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 11951.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 12500.0,
+      "votes": 1,
+      "confidence": 53.1,
+      "is_anomaly": 1,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 12729.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 13163.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 13640.0,
+      "votes": 1,
+      "confidence": 53.1,
+      "is_anomaly": 1,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 14247.0,
+      "votes": 1,
+      "confidence": 53.1,
+      "is_anomaly": 1,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 14571.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 14914.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 15478.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 16007.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 16493.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 17281.0,
+      "votes": 1,
+      "confidence": 53.1,
+      "is_anomaly": 1,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 17623.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 18070.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 18655.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 19101.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 19482.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 19892.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 20206.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 20984.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 21309.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 21581.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 22216.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 22502.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 23353.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 24021.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 24631.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 25384.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 26087.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 26937.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 27546.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 28029.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 28350.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 28708.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 29201.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 29587.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 29908.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 30163.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 30415.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 30840.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 31265.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 31767.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 32409.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 32902.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 33358.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 34007.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 34570.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 35408.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 35892.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 36806.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 37231.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 38244.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 38330.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 38423.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 38492.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 39034.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 39612.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 39708.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 39781.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 39864.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 39930.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 40005.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 40061.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 40147.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 40216.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 40302.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 40357.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 40426.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 40504.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 40568.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 40643.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 40727.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 40787.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 6.7
+    },
+    {
+      "timestamp": 40848.0,
+      "votes": 1,
+      "confidence": 54.8,
+      "is_anomaly": 1,
+      "z_score": 3.61
+    },
+    {
+      "timestamp": 40908.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 40993.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 41074.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 41136.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 41315.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 41418.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 41500.0,
+      "votes": 3,
+      "confidence": 97.9,
+      "is_anomaly": 1,
+      "z_score": 4.64
+    },
+    {
+      "timestamp": 41867.801,
+      "votes": 3,
+      "confidence": 97.9,
+      "is_anomaly": 1,
+      "z_score": 4.64
+    },
+    {
+      "timestamp": 42000.0,
+      "votes": 3,
+      "confidence": 97.9,
+      "is_anomaly": 1,
+      "z_score": 4.64
+    },
+    {
+      "timestamp": 42188.0,
+      "votes": 3,
+      "confidence": 97.9,
+      "is_anomaly": 1,
+      "z_score": 4.64
+    },
+    {
+      "timestamp": 42355.0,
+      "votes": 1,
+      "confidence": 57.1,
+      "is_anomaly": 1,
+      "z_score": 4.35
+    },
+    {
+      "timestamp": 42523.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 6.62
+    },
+    {
+      "timestamp": 42636.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 6.62
+    },
+    {
+      "timestamp": 42776.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 6.62
+    },
+    {
+      "timestamp": 43069.172,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 6.62
+    },
+    {
+      "timestamp": 43355.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 6.62
+    },
+    {
+      "timestamp": 43360.288,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 6.62
+    },
+    {
+      "timestamp": 43469.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 6.62
+    },
+    {
+      "timestamp": 43532.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 6.62
+    },
+    {
+      "timestamp": 43611.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 6.62
+    },
+    {
+      "timestamp": 43681.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 6.62
+    },
+    {
+      "timestamp": 43790.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 6.62
+    },
+    {
+      "timestamp": 43853.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 6.62
+    },
+    {
+      "timestamp": 43941.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 6.62
+    },
+    {
+      "timestamp": 44010.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 6.62
+    },
+    {
+      "timestamp": 44077.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 6.62
+    },
+    {
+      "timestamp": 44289.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 6.62
+    },
+    {
+      "timestamp": 44618.818,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 6.62
+    },
+    {
+      "timestamp": 44623.645,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 6.62
+    },
+    {
+      "timestamp": 44629.077,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.15
+    },
+    {
+      "timestamp": 44667.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.03
+    },
+    {
+      "timestamp": 44729.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.39
+    },
+    {
+      "timestamp": 44816.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.39
+    },
+    {
+      "timestamp": 44907.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.89
+    },
+    {
+      "timestamp": 44997.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.88
+    },
+    {
+      "timestamp": 45111.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.88
+    },
+    {
+      "timestamp": 45289.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 5.87
+    },
+    {
+      "timestamp": 45854.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 5.87
+    },
+    {
+      "timestamp": 46502.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 5.87
+    },
+    {
+      "timestamp": 46903.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 5.87
+    },
+    {
+      "timestamp": 47292.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 5.87
+    },
+    {
+      "timestamp": 47656.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 5.87
+    },
+    {
+      "timestamp": 47875.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 5.87
+    },
+    {
+      "timestamp": 48202.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 5.87
+    },
+    {
+      "timestamp": 48869.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 5.87
+    },
+    {
+      "timestamp": 49588.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 5.87
+    },
+    {
+      "timestamp": 50109.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 5.87
+    },
+    {
+      "timestamp": 50745.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 5.87
+    },
+    {
+      "timestamp": 50842.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.69
+    },
+    {
+      "timestamp": 50933.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 51113.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 51286.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 51361.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 51431.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 51516.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.28
+    },
+    {
+      "timestamp": 51576.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 51645.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.37
+    },
+    {
+      "timestamp": 51712.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.37
+    },
+    {
+      "timestamp": 51808.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.37
+    },
+    {
+      "timestamp": 52001.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 52327.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.25
+    },
+    {
+      "timestamp": 52389.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.15
+    },
+    {
+      "timestamp": 52538.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 53055.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.05
+    },
+    {
+      "timestamp": 53120.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 5.41
+    },
+    {
+      "timestamp": 53203.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 53268.0,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 2.01
+    },
+    {
+      "timestamp": 53349.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.99
+    },
+    {
+      "timestamp": 53455.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.74
+    },
+    {
+      "timestamp": 53522.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.15
+    },
+    {
+      "timestamp": 54072.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 54766.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.18
+    },
+    {
+      "timestamp": 55221.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 55390.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.33
+    },
+    {
+      "timestamp": 55452.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.48
+    },
+    {
+      "timestamp": 55515.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.74
+    },
+    {
+      "timestamp": 55577.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.89
+    },
+    {
+      "timestamp": 55653.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.14
+    },
+    {
+      "timestamp": 55718.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.87
+    },
+    {
+      "timestamp": 55832.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.55
+    },
+    {
+      "timestamp": 55911.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.55
+    },
+    {
+      "timestamp": 55995.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.55
+    },
+    {
+      "timestamp": 56152.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 56240.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.71
+    },
+    {
+      "timestamp": 56518.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 56677.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 56739.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 56822.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.35
+    },
+    {
+      "timestamp": 56905.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.48
+    },
+    {
+      "timestamp": 57107.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.69
+    },
+    {
+      "timestamp": 57176.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.05
+    },
+    {
+      "timestamp": 57239.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.16
+    },
+    {
+      "timestamp": 57315.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 57390.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 57486.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 57576.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 57863.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 57990.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.15
+    },
+    {
+      "timestamp": 58053.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.77
+    },
+    {
+      "timestamp": 58103.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.89
+    },
+    {
+      "timestamp": 58165.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.01
+    },
+    {
+      "timestamp": 58241.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.01
+    },
+    {
+      "timestamp": 58448.0,
+      "votes": 1,
+      "confidence": 57.4,
+      "is_anomaly": 1,
+      "z_score": 4.46
+    },
+    {
+      "timestamp": 58540.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.89
+    },
+    {
+      "timestamp": 58628.0,
+      "votes": 1,
+      "confidence": 55.7,
+      "is_anomaly": 1,
+      "z_score": 3.89
+    },
+    {
+      "timestamp": 58683.0,
+      "votes": 1,
+      "confidence": 55.7,
+      "is_anomaly": 1,
+      "z_score": 3.89
+    },
+    {
+      "timestamp": 58741.0,
+      "votes": 1,
+      "confidence": 55.7,
+      "is_anomaly": 1,
+      "z_score": 3.89
+    },
+    {
+      "timestamp": 58801.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.89
+    },
+    {
+      "timestamp": 59020.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.48
+    },
+    {
+      "timestamp": 59143.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.54
+    },
+    {
+      "timestamp": 59251.0,
+      "votes": 1,
+      "confidence": 55.7,
+      "is_anomaly": 1,
+      "z_score": 3.89
+    },
+    {
+      "timestamp": 59312.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.56
+    },
+    {
+      "timestamp": 59370.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.43
+    },
+    {
+      "timestamp": 59425.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.48
+    },
+    {
+      "timestamp": 59486.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.56
+    },
+    {
+      "timestamp": 59568.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 5.97
+    },
+    {
+      "timestamp": 59626.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 6.61
+    },
+    {
+      "timestamp": 59686.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 5.85
+    },
+    {
+      "timestamp": 59744.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.03
+    },
+    {
+      "timestamp": 59831.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.48
+    },
+    {
+      "timestamp": 59920.0,
+      "votes": 1,
+      "confidence": 56.1,
+      "is_anomaly": 1,
+      "z_score": 4.03
+    },
+    {
+      "timestamp": 60174.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 60375.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 60592.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.03
+    },
+    {
+      "timestamp": 60651.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.71
+    },
+    {
+      "timestamp": 60764.0,
+      "votes": 1,
+      "confidence": 56.1,
+      "is_anomaly": 1,
+      "z_score": 4.03
+    },
+    {
+      "timestamp": 60996.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.09
+    },
+    {
+      "timestamp": 61207.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.03
+    },
+    {
+      "timestamp": 61268.0,
+      "votes": 1,
+      "confidence": 56.1,
+      "is_anomaly": 1,
+      "z_score": 4.03
+    },
+    {
+      "timestamp": 61328.0,
+      "votes": 1,
+      "confidence": 56.1,
+      "is_anomaly": 1,
+      "z_score": 4.03
+    },
+    {
+      "timestamp": 61391.0,
+      "votes": 1,
+      "confidence": 56.1,
+      "is_anomaly": 1,
+      "z_score": 4.03
+    },
+    {
+      "timestamp": 61472.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.85
+    },
+    {
+      "timestamp": 61547.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.85
+    },
+    {
+      "timestamp": 61629.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.85
+    },
+    {
+      "timestamp": 61732.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.85
+    },
+    {
+      "timestamp": 61794.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.03
+    },
+    {
+      "timestamp": 61848.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.01
+    },
+    {
+      "timestamp": 61900.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.01
+    },
+    {
+      "timestamp": 61984.0,
+      "votes": 1,
+      "confidence": 55.7,
+      "is_anomaly": 1,
+      "z_score": 3.89
+    },
+    {
+      "timestamp": 62042.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.01
+    },
+    {
+      "timestamp": 62089.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.01
+    },
+    {
+      "timestamp": 62139.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.01
+    },
+    {
+      "timestamp": 62225.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.89
+    },
+    {
+      "timestamp": 62296.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.56
+    },
+    {
+      "timestamp": 62356.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.09
+    },
+    {
+      "timestamp": 62421.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.09
+    },
+    {
+      "timestamp": 62482.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.58
+    },
+    {
+      "timestamp": 62562.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 62625.0,
+      "votes": 1,
+      "confidence": 59.3,
+      "is_anomaly": 1,
+      "z_score": 5.09
+    },
+    {
+      "timestamp": 62698.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.97
+    },
+    {
+      "timestamp": 62768.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 62834.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.17
+    },
+    {
+      "timestamp": 63145.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 63927.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 64512.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 65287.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 66079.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 67067.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 67918.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 68896.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 69157.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.13
+    },
+    {
+      "timestamp": 69302.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.43
+    },
+    {
+      "timestamp": 69384.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.43
+    },
+    {
+      "timestamp": 69506.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.43
+    },
+    {
+      "timestamp": 69632.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.43
+    },
+    {
+      "timestamp": 69774.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.43
+    },
+    {
+      "timestamp": 69865.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.43
+    },
+    {
+      "timestamp": 69985.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.43
+    },
+    {
+      "timestamp": 70133.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.43
+    },
+    {
+      "timestamp": 70257.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.43
+    },
+    {
+      "timestamp": 70337.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.43
+    },
+    {
+      "timestamp": 70683.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.43
+    },
+    {
+      "timestamp": 70977.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 71180.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.66
+    },
+    {
+      "timestamp": 71239.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.9
+    },
+    {
+      "timestamp": 71303.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 71371.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 71440.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.1
+    },
+    {
+      "timestamp": 72094.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 74479.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.32
+    },
+    {
+      "timestamp": 75573.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 76316.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 77326.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.32
+    },
+    {
+      "timestamp": 78145.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 78878.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 79569.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 80200.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 81185.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 81809.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 82545.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 84008.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 85162.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 86284.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 87024.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 87573.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.32
+    },
+    {
+      "timestamp": 88036.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.32
+    },
+    {
+      "timestamp": 88661.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 89384.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 90104.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 90568.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 91026.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 91771.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 92203.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 93005.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.32
+    },
+    {
+      "timestamp": 93432.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 93732.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 94139.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 94430.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 94814.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 95531.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 96005.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 96827.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 97892.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 98872.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 100021.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 100915.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 101593.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 102523.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 103330.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 104319.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 105101.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 106020.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 106787.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 107575.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 108458.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.32
+    },
+    {
+      "timestamp": 109530.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.32
+    },
+    {
+      "timestamp": 110284.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.32
+    },
+    {
+      "timestamp": 111463.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 112442.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 113517.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 114840.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 115740.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 116593.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 118014.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 119117.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 120280.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 121038.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 122186.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 123767.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 123860.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 123930.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 123995.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.29
+    },
+    {
+      "timestamp": 124057.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.84
+    },
+    {
+      "timestamp": 124129.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.28
+    },
+    {
+      "timestamp": 124185.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.42
+    },
+    {
+      "timestamp": 124241.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.46
+    },
+    {
+      "timestamp": 124361.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.2
+    },
+    {
+      "timestamp": 124423.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.0
+    },
+    {
+      "timestamp": 124486.0,
+      "votes": 1,
+      "confidence": 54.1,
+      "is_anomaly": 1,
+      "z_score": 3.37
+    },
+    {
+      "timestamp": 124542.0,
+      "votes": 1,
+      "confidence": 57.8,
+      "is_anomaly": 1,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 124717.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 125416.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 125498.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.01
+    },
+    {
+      "timestamp": 125569.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 125649.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 125719.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 125790.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 125861.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.48
+    },
+    {
+      "timestamp": 125987.0,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 126516.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 126652.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 126930.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 127100.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 127195.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.87
+    },
+    {
+      "timestamp": 127284.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.48
+    },
+    {
+      "timestamp": 128024.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.48
+    },
+    {
+      "timestamp": 128692.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.13
+    },
+    {
+      "timestamp": 128772.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.9
+    },
+    {
+      "timestamp": 128839.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.76
+    },
+    {
+      "timestamp": 128930.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.37
+    },
+    {
+      "timestamp": 129043.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.61
+    },
+    {
+      "timestamp": 129179.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.74
+    },
+    {
+      "timestamp": 129515.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 130100.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 130821.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 131418.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 131993.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 132386.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 132708.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 132980.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 133551.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 133872.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 134350.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 134957.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 135961.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 137069.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 137941.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 138553.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 139601.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 140612.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 140840.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 141439.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.94
+    },
+    {
+      "timestamp": 141887.0,
+      "votes": 1,
+      "confidence": 53.1,
+      "is_anomaly": 1,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 142514.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.89
+    },
+    {
+      "timestamp": 143300.0,
+      "votes": 1,
+      "confidence": 53.1,
+      "is_anomaly": 1,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 144280.0,
+      "votes": 1,
+      "confidence": 53.1,
+      "is_anomaly": 1,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 145391.0,
+      "votes": 1,
+      "confidence": 53.1,
+      "is_anomaly": 1,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 147900.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 0.89
+    },
+    {
+      "timestamp": 148571.933,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 149018.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 149130.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 149859.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 150512.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 151053.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 151837.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 152025.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.23
+    },
+    {
+      "timestamp": 152087.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.24
+    },
+    {
+      "timestamp": 152143.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 152218.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.82
+    },
+    {
+      "timestamp": 152310.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 152370.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 152429.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.74
+    },
+    {
+      "timestamp": 152500.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.74
+    },
+    {
+      "timestamp": 152561.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 152620.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.84
+    },
+    {
+      "timestamp": 152701.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.15
+    },
+    {
+      "timestamp": 152762.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.51
+    },
+    {
+      "timestamp": 152890.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.74
+    },
+    {
+      "timestamp": 152953.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.74
+    },
+    {
+      "timestamp": 153015.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.74
+    },
+    {
+      "timestamp": 153091.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.74
+    },
+    {
+      "timestamp": 153148.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.74
+    },
+    {
+      "timestamp": 153226.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.61
+    },
+    {
+      "timestamp": 153328.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.4
+    },
+    {
+      "timestamp": 153390.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.38
+    },
+    {
+      "timestamp": 153466.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 10.92
+    },
+    {
+      "timestamp": 153531.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.48
+    },
+    {
+      "timestamp": 153607.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.48
+    },
+    {
+      "timestamp": 153677.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.48
+    },
+    {
+      "timestamp": 154469.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 155553.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 156459.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 157486.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 157825.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 158209.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 158903.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 159706.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 160264.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 160455.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.2
+    },
+    {
+      "timestamp": 160537.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 160607.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 160698.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 160769.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 160844.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.41
+    },
+    {
+      "timestamp": 160915.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 161248.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 161337.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 161640.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 162044.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.45
+    },
+    {
+      "timestamp": 162762.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.45
+    },
+    {
+      "timestamp": 163431.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.45
+    },
+    {
+      "timestamp": 163922.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.45
+    },
+    {
+      "timestamp": 164523.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 165069.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 165742.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 166281.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 166563.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 166648.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.37
+    },
+    {
+      "timestamp": 166711.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.46
+    },
+    {
+      "timestamp": 166774.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.46
+    },
+    {
+      "timestamp": 166846.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.46
+    },
+    {
+      "timestamp": 167153.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 168067.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 168917.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 169462.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 170190.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 170712.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 171282.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 172009.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 172919.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 173755.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 174675.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 175703.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 176610.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 177578.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 178607.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 179696.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 180543.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 184238.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 185670.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 186452.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 187123.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 187870.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 188444.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 189245.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 189905.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 190643.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 191246.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 192094.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 192777.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 193729.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 194577.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 195483.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 196509.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 197535.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 198561.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 199647.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 200734.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 201760.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 202738.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 203756.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 204637.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.51
+    },
+    {
+      "timestamp": 204724.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.58
+    },
+    {
+      "timestamp": 204781.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 204852.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.18
+    },
+    {
+      "timestamp": 204917.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.3
+    },
+    {
+      "timestamp": 205032.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 5.69
+    },
+    {
+      "timestamp": 205095.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.01
+    },
+    {
+      "timestamp": 205157.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.06
+    },
+    {
+      "timestamp": 205346.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.3
+    },
+    {
+      "timestamp": 205451.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.15
+    },
+    {
+      "timestamp": 205511.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.11
+    },
+    {
+      "timestamp": 205572.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.11
+    },
+    {
+      "timestamp": 205880.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.11
+    },
+    {
+      "timestamp": 206618.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.11
+    },
+    {
+      "timestamp": 207444.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.11
+    },
+    {
+      "timestamp": 208101.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.11
+    },
+    {
+      "timestamp": 208552.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.11
+    },
+    {
+      "timestamp": 209500.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.11
+    },
+    {
+      "timestamp": 210076.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.11
+    },
+    {
+      "timestamp": 210793.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 211271.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.19
+    },
+    {
+      "timestamp": 211338.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 211422.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 211497.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 211591.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.47
+    },
+    {
+      "timestamp": 211651.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.32
+    },
+    {
+      "timestamp": 211714.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.13
+    },
+    {
+      "timestamp": 211791.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.17
+    },
+    {
+      "timestamp": 211880.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.13
+    },
+    {
+      "timestamp": 212118.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 212234.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 212303.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.48
+    },
+    {
+      "timestamp": 212750.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 213535.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 214084.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 214661.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 215122.31,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.18
+    },
+    {
+      "timestamp": 215446.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 215853.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 10.99
+    },
+    {
+      "timestamp": 216344.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 10.99
+    },
+    {
+      "timestamp": 216799.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 10.99
+    },
+    {
+      "timestamp": 216982.569,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 9.2
+    },
+    {
+      "timestamp": 217253.313,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 12.7
+    },
+    {
+      "timestamp": 217403.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 12.7
+    },
+    {
+      "timestamp": 217466.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 12.7
+    },
+    {
+      "timestamp": 217534.779,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 12.7
+    },
+    {
+      "timestamp": 217609.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 12.7
+    },
+    {
+      "timestamp": 217689.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 12.7
+    },
+    {
+      "timestamp": 217760.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 10.99
+    },
+    {
+      "timestamp": 217939.014,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 9.2
+    },
+    {
+      "timestamp": 218727.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 10.99
+    },
+    {
+      "timestamp": 219500.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 10.99
+    },
+    {
+      "timestamp": 222282.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 10.56
+    },
+    {
+      "timestamp": 222918.0,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 223142.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 224220.986,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 224259.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 224432.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 224493.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 224558.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 224873.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.78
+    },
+    {
+      "timestamp": 224967.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 225030.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.48
+    },
+    {
+      "timestamp": 225095.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.52
+    },
+    {
+      "timestamp": 225397.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 225508.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.22
+    },
+    {
+      "timestamp": 225570.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.22
+    },
+    {
+      "timestamp": 225649.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.22
+    },
+    {
+      "timestamp": 225954.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.64
+    },
+    {
+      "timestamp": 226292.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.43
+    },
+    {
+      "timestamp": 226527.0,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 226814.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.51
+    },
+    {
+      "timestamp": 226879.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 226954.0,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 227551.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 228215.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 10.99
+    },
+    {
+      "timestamp": 228869.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 10.99
+    },
+    {
+      "timestamp": 228935.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 10.6
+    },
+    {
+      "timestamp": 229025.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 10.6
+    },
+    {
+      "timestamp": 229074.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 7.53
+    },
+    {
+      "timestamp": 229108.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 12.92
+    },
+    {
+      "timestamp": 229148.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 8.76
+    },
+    {
+      "timestamp": 229187.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 8.14
+    },
+    {
+      "timestamp": 229226.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 8.14
+    },
+    {
+      "timestamp": 229302.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 11.73
+    },
+    {
+      "timestamp": 229345.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 10.6
+    },
+    {
+      "timestamp": 229378.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 6.91
+    },
+    {
+      "timestamp": 229418.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 9.36
+    },
+    {
+      "timestamp": 229474.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 9.36
+    },
+    {
+      "timestamp": 229527.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 10.6
+    },
+    {
+      "timestamp": 229729.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 5.08
+    },
+    {
+      "timestamp": 230552.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 5.08
+    },
+    {
+      "timestamp": 231000.0,
+      "votes": 1,
+      "confidence": 59.2,
+      "is_anomaly": 1,
+      "z_score": 5.08
+    },
+    {
+      "timestamp": 231642.0,
+      "votes": 1,
+      "confidence": 59.2,
+      "is_anomaly": 1,
+      "z_score": 5.08
+    },
+    {
+      "timestamp": 232259.0,
+      "votes": 1,
+      "confidence": 59.2,
+      "is_anomaly": 1,
+      "z_score": 5.08
+    },
+    {
+      "timestamp": 232365.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.37
+    },
+    {
+      "timestamp": 232427.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.28
+    },
+    {
+      "timestamp": 232489.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.21
+    },
+    {
+      "timestamp": 232549.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.46
+    },
+    {
+      "timestamp": 232617.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.46
+    },
+    {
+      "timestamp": 232677.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.46
+    },
+    {
+      "timestamp": 232738.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.01
+    },
+    {
+      "timestamp": 232798.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.42
+    },
+    {
+      "timestamp": 232859.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 6.61
+    },
+    {
+      "timestamp": 232919.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.76
+    },
+    {
+      "timestamp": 232981.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.84
+    },
+    {
+      "timestamp": 233045.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.74
+    },
+    {
+      "timestamp": 233106.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.74
+    },
+    {
+      "timestamp": 233171.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 233232.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.28
+    },
+    {
+      "timestamp": 233293.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.48
+    },
+    {
+      "timestamp": 233358.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 233453.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.77
+    },
+    {
+      "timestamp": 233514.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.53
+    },
+    {
+      "timestamp": 233595.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.01
+    },
+    {
+      "timestamp": 233657.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.01
+    },
+    {
+      "timestamp": 233718.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.01
+    },
+    {
+      "timestamp": 233778.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.01
+    },
+    {
+      "timestamp": 233839.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.97
+    },
+    {
+      "timestamp": 234382.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 235260.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 235987.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.36
+    },
+    {
+      "timestamp": 236056.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 236119.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.52
+    },
+    {
+      "timestamp": 236180.0,
+      "votes": 1,
+      "confidence": 60.0,
+      "is_anomaly": 1,
+      "z_score": 6.23
+    },
+    {
+      "timestamp": 236260.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.33
+    },
+    {
+      "timestamp": 236326.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.74
+    },
+    {
+      "timestamp": 236402.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.74
+    },
+    {
+      "timestamp": 236472.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.38
+    },
+    {
+      "timestamp": 236585.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.64
+    },
+    {
+      "timestamp": 236656.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 237309.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 237878.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 238711.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 239392.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 240020.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.41
+    },
+    {
+      "timestamp": 240330.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.37
+    },
+    {
+      "timestamp": 240823.0,
+      "votes": 1,
+      "confidence": 53.1,
+      "is_anomaly": 1,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 241236.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.48
+    },
+    {
+      "timestamp": 241365.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.37
+    },
+    {
+      "timestamp": 241655.0,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 241793.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.74
+    },
+    {
+      "timestamp": 241858.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.74
+    },
+    {
+      "timestamp": 241915.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.74
+    },
+    {
+      "timestamp": 241980.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.95
+    },
+    {
+      "timestamp": 242046.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.37
+    },
+    {
+      "timestamp": 242111.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.15
+    },
+    {
+      "timestamp": 243001.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 243903.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 244835.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 245942.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 247357.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 248344.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 249085.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 250094.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 250674.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 251229.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 251739.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 252005.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 252223.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 252567.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 253328.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 254039.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.45
+    },
+    {
+      "timestamp": 254223.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 254825.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 255135.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 255516.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 255812.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 256193.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 256641.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 257010.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 257398.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 257953.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 258622.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 259321.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 260100.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 260768.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 261601.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 262202.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 262938.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 264048.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 265244.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 265790.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 266690.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 267876.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 268933.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 269475.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 270213.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 270800.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 271714.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 272979.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 273849.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 274334.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 275340.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 275838.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 276734.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 277637.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 278487.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 279443.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 280298.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 281059.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 281926.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 282813.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 283397.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 284246.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 284914.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 285731.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 286320.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 287283.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 288290.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 289339.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 289971.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 290630.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 291277.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 292180.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 292848.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 293638.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 294489.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 295405.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 296073.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 296569.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 297408.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 298163.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 298925.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 299894.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 300794.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 301552.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 302869.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 303721.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 305124.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 306279.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 307526.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 308395.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 309333.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 310487.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 310881.0,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 311097.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 311504.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.65
+    },
+    {
+      "timestamp": 311568.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 311805.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 312105.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 312190.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.37
+    },
+    {
+      "timestamp": 312248.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 312412.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 312487.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 312570.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.36
+    },
+    {
+      "timestamp": 312682.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 312953.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.47
+    },
+    {
+      "timestamp": 313051.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.37
+    },
+    {
+      "timestamp": 313139.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 314023.0,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 314183.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.59
+    },
+    {
+      "timestamp": 314246.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.37
+    },
+    {
+      "timestamp": 314307.0,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.89
+    },
+    {
+      "timestamp": 314507.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 314630.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 314687.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 314763.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 314839.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.58
+    },
+    {
+      "timestamp": 314988.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.64
+    },
+    {
+      "timestamp": 315089.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 315150.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.9
+    },
+    {
+      "timestamp": 315230.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.55
+    },
+    {
+      "timestamp": 315418.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.22
+    },
+    {
+      "timestamp": 315475.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.22
+    },
+    {
+      "timestamp": 315542.0,
+      "votes": 1,
+      "confidence": 53.7,
+      "is_anomaly": 1,
+      "z_score": 3.22
+    },
+    {
+      "timestamp": 315950.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.6
+    },
+    {
+      "timestamp": 316053.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.74
+    },
+    {
+      "timestamp": 316162.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 316263.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.23
+    },
+    {
+      "timestamp": 316459.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.59
+    },
+    {
+      "timestamp": 316565.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 317418.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 318205.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 318378.0,
+      "votes": 1,
+      "confidence": 57.6,
+      "is_anomaly": 1,
+      "z_score": 4.52
+    },
+    {
+      "timestamp": 318561.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 319480.0,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.63
+    },
+    {
+      "timestamp": 320029.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.63
+    },
+    {
+      "timestamp": 320355.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.63
+    },
+    {
+      "timestamp": 320614.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.63
+    },
+    {
+      "timestamp": 321037.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.63
+    },
+    {
+      "timestamp": 321333.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.63
+    },
+    {
+      "timestamp": 321964.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.63
+    },
+    {
+      "timestamp": 322491.0,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.63
+    },
+    {
+      "timestamp": 323085.0,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.63
+    },
+    {
+      "timestamp": 323909.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 324334.0,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 324559.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.71
+    },
+    {
+      "timestamp": 325071.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 325135.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 325199.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.77
+    },
+    {
+      "timestamp": 325270.0,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 325623.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.84
+    },
+    {
+      "timestamp": 325792.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.84
+    },
+    {
+      "timestamp": 326157.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.02
+    },
+    {
+      "timestamp": 326359.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 326419.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.25
+    },
+    {
+      "timestamp": 326480.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.12
+    },
+    {
+      "timestamp": 326543.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.37
+    },
+    {
+      "timestamp": 326607.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.57
+    },
+    {
+      "timestamp": 326664.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 326728.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 326788.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.69
+    },
+    {
+      "timestamp": 326994.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 327741.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 328163.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 328875.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 329722.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 331567.0,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.37
+    },
+    {
+      "timestamp": 331668.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.48
+    },
+    {
+      "timestamp": 331731.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.44
+    },
+    {
+      "timestamp": 331842.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.09
+    },
+    {
+      "timestamp": 331903.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.74
+    },
+    {
+      "timestamp": 331969.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.74
+    },
+    {
+      "timestamp": 332395.0,
+      "votes": 1,
+      "confidence": 53.1,
+      "is_anomaly": 1,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 333228.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.37
+    },
+    {
+      "timestamp": 333326.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.48
+    },
+    {
+      "timestamp": 340372.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 368025.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 373091.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 397650.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 397834.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 398264.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.79
+    },
+    {
+      "timestamp": 398352.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.01
+    },
+    {
+      "timestamp": 398469.0,
+      "votes": 1,
+      "confidence": 52.7,
+      "is_anomaly": 1,
+      "z_score": 2.9
+    },
+    {
+      "timestamp": 398534.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.3
+    },
+    {
+      "timestamp": 398596.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.0
+    },
+    {
+      "timestamp": 398704.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 6.42
+    },
+    {
+      "timestamp": 398766.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.01
+    },
+    {
+      "timestamp": 399026.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.56
+    },
+    {
+      "timestamp": 399288.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.83
+    },
+    {
+      "timestamp": 399525.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.83
+    },
+    {
+      "timestamp": 399881.0,
+      "votes": 2,
+      "confidence": 78.1,
+      "is_anomaly": 1,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 400016.0,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 400333.0,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 400459.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.01
+    },
+    {
+      "timestamp": 400527.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.86
+    },
+    {
+      "timestamp": 400604.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.43
+    },
+    {
+      "timestamp": 400685.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 400761.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.53
+    },
+    {
+      "timestamp": 401104.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    },
+    {
+      "timestamp": 401369.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 401464.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.22
+    },
+    {
+      "timestamp": 401582.0,
+      "votes": 1,
+      "confidence": 56.3,
+      "is_anomaly": 1,
+      "z_score": 4.11
+    },
+    {
+      "timestamp": 401877.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.26
+    },
+    {
+      "timestamp": 402213.0,
+      "votes": 1,
+      "confidence": 51.6,
+      "is_anomaly": 1,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 402469.0,
+      "votes": 1,
+      "confidence": 53.1,
+      "is_anomaly": 1,
+      "z_score": 3.02
+    },
+    {
+      "timestamp": 402788.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.59
+    },
+    {
+      "timestamp": 402873.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.61
+    },
+    {
+      "timestamp": 402935.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.78
+    },
+    {
+      "timestamp": 403001.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.25
+    },
+    {
+      "timestamp": 403159.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.2
+    },
+    {
+      "timestamp": 403260.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.79
+    },
+    {
+      "timestamp": 403372.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.37
+    },
+    {
+      "timestamp": 403448.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.05
+    },
+    {
+      "timestamp": 403610.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 403676.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 403741.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.55
+    },
+    {
+      "timestamp": 403824.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 403887.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.43
+    },
+    {
+      "timestamp": 404063.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.76
+    },
+    {
+      "timestamp": 404238.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.61
+    },
+    {
+      "timestamp": 404635.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.51
+    },
+    {
+      "timestamp": 404687.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 404762.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.81
+    },
+    {
+      "timestamp": 404823.0,
+      "votes": 1,
+      "confidence": 58.1,
+      "is_anomaly": 1,
+      "z_score": 4.71
+    },
+    {
+      "timestamp": 404885.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 404988.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.04
+    },
+    {
+      "timestamp": 405053.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.21
+    },
+    {
+      "timestamp": 405124.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 405329.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.63
+    },
+    {
+      "timestamp": 405392.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.72
+    },
+    {
+      "timestamp": 405553.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.02
+    },
+    {
+      "timestamp": 405621.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.11
+    },
+    {
+      "timestamp": 405687.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.21
+    },
+    {
+      "timestamp": 405760.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.31
+    },
+    {
+      "timestamp": 405821.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.41
+    },
+    {
+      "timestamp": 405881.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 406033.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 406223.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 406483.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 406673.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 407142.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 407434.0,
+      "votes": 1,
+      "confidence": 57.8,
+      "is_anomaly": 1,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 407643.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 407868.674,
+      "votes": 1,
+      "confidence": 57.8,
+      "is_anomaly": 1,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 408081.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 408397.0,
+      "votes": 1,
+      "confidence": 57.8,
+      "is_anomaly": 1,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 408619.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 408810.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 409030.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 409477.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 409690.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 409893.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 410123.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 410318.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 410517.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 410721.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 410902.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 411300.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 411520.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 416101.35,
+      "votes": 1,
+      "confidence": 57.8,
+      "is_anomaly": 1,
+      "z_score": 4.61
+    },
+    {
+      "timestamp": 429919.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 431233.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 432408.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 433518.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 434617.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 435672.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 436847.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 437893.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.07
+    },
+    {
+      "timestamp": 439488.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 440597.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 441707.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 442816.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 443925.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 445046.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 446144.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 447253.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 448362.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 449472.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 450581.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 451745.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 452865.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 453974.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 455149.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 456324.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 457584.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 459478.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 460728.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.45
+    },
+    {
+      "timestamp": 462325.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.45
+    },
+    {
+      "timestamp": 463497.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.45
+    },
+    {
+      "timestamp": 531042.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.45
+    },
+    {
+      "timestamp": 532221.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.45
+    },
+    {
+      "timestamp": 533395.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.45
+    },
+    {
+      "timestamp": 534569.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.45
+    },
+    {
+      "timestamp": 535702.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.45
+    },
+    {
+      "timestamp": 536865.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.45
+    },
+    {
+      "timestamp": 538174.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.45
+    },
+    {
+      "timestamp": 539294.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.45
+    },
+    {
+      "timestamp": 540457.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.45
+    },
+    {
+      "timestamp": 541748.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.45
+    },
+    {
+      "timestamp": 542848.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 549457.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 550644.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 563975.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 566019.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 592272.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 594711.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 595979.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.45
+    },
+    {
+      "timestamp": 645051.0,
+      "votes": 1,
+      "confidence": 52.1,
+      "is_anomaly": 1,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 645174.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.37
+    },
+    {
+      "timestamp": 645252.0,
+      "votes": 1,
+      "confidence": 52.1,
+      "is_anomaly": 1,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 645348.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 645518.0,
+      "votes": 2,
+      "confidence": 85.0,
+      "is_anomaly": 1,
+      "z_score": 7.1
+    },
+    {
+      "timestamp": 645635.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 3.58
+    },
+    {
+      "timestamp": 645792.0,
+      "votes": 1,
+      "confidence": 52.1,
+      "is_anomaly": 1,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 645893.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 646267.0,
+      "votes": 1,
+      "confidence": 52.1,
+      "is_anomaly": 1,
+      "z_score": 2.71
+    },
+    {
+      "timestamp": 646384.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.98
+    },
+    {
+      "timestamp": 646446.0,
+      "votes": 1,
+      "confidence": 55.0,
+      "is_anomaly": 1,
+      "z_score": 3.67
+    },
+    {
+      "timestamp": 646517.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 646583.0,
+      "votes": 1,
+      "confidence": 53.0,
+      "is_anomaly": 1,
+      "z_score": 3.01
+    },
+    {
+      "timestamp": 646665.0,
+      "votes": 1,
+      "confidence": 51.6,
+      "is_anomaly": 1,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 647105.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 647600.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 647963.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 648326.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 648779.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.37
+    },
+    {
+      "timestamp": 648871.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.7
+    },
+    {
+      "timestamp": 649041.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.62
+    },
+    {
+      "timestamp": 649213.0,
+      "votes": 1,
+      "confidence": 50.0,
+      "is_anomaly": 1,
+      "z_score": 1.8
+    },
+    {
+      "timestamp": 649273.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 2.53
+    },
+    {
+      "timestamp": 649374.0,
+      "votes": 0,
+      "confidence": 0.0,
+      "is_anomaly": 0,
+      "z_score": 1.68
+    }
+  ],
+  "normal_ranges": {
+    "ABSOLULTE BAROMETRIC PRESSURE": {
+      "q25": 100.0,
+      "q75": 100.0,
+      "min": 2.5,
+      "max": 100.0,
+      "median": 100.0
+    },
+    "engine_load": {
+      "q25": 30.0,
+      "q75": 60.0,
+      "min": 0.0,
+      "max": 90.0,
+      "median": 30.0
+    },
+    "throttle": {
+      "q25": 1.0,
+      "q75": 15.0,
+      "min": 0.0,
+      "max": 37.0,
+      "median": 14.0
+    },
+    "ABSOLUTE THROTTLE POSITION D": {
+      "q25": 1.0,
+      "q75": 18.0,
+      "min": 0.0,
+      "max": 49.0,
+      "median": 15.0
+    },
+    "ABSOLUTE THROTTLE POSITION E": {
+      "q25": 1.0,
+      "q75": 9.0,
+      "min": 0.0,
+      "max": 25.0,
+      "median": 7.0
+    },
+    "ACCELERATION X": {
+      "q25": 0.1,
+      "q75": 0.7,
+      "min": -3.5,
+      "max": 6.5,
+      "median": 0.6
+    },
+    "ACCELERATION Y": {
+      "q25": -9.0,
+      "q75": -8.4,
+      "min": -17.4,
+      "max": 12.0,
+      "median": -8.75
+    },
+    "ACCELERATION Z": {
+      "q25": 3.25,
+      "q75": 4.0,
+      "min": -12.5,
+      "max": 11.0,
+      "median": 3.75
+    },
+    "ACTUAL ENGIN - PERCENT TORQUE": {
+      "q25": 60.0,
+      "q75": 60.0,
+      "min": 5.0,
+      "max": 60.0,
+      "median": 60.0
+    },
+    "coolant_temp": {
+      "q25": 20.0,
+      "q75": 60.0,
+      "min": 20.0,
+      "max": 80.0,
+      "median": 40.0
+    },
+    "AMBIENT AIR TEMPERATURE": {
+      "q25": 20.0,
+      "q75": 20.0,
+      "min": 4.0,
+      "max": 20.0,
+      "median": 20.0
+    },
+    "CALCULATED ENGINE LOAD": {
+      "q25": 5.0,
+      "q75": 35.0,
+      "min": 0.0,
+      "max": 100.0,
+      "median": 25.0
+    },
+    "CATALYST TEMPERATURE BANK 1 SENSOR 1": {
+      "q25": 30.0,
+      "q75": 600.0,
+      "min": 30.0,
+      "max": 870.0,
+      "median": 105.0
+    },
+    "COMMANDED EVAPORATIVE PURGE": {
+      "q25": 0.0,
+      "q75": 10.0,
+      "min": 0.0,
+      "max": 100.0,
+      "median": 0.0
+    },
+    "COMMANDED THROTTLE ACTUATOR": {
+      "q25": 1.0,
+      "q75": 6.0,
+      "min": 0.0,
+      "max": 40.0,
+      "median": 5.0
+    },
+    "CONTROL MODULE VOLTAGE": {
+      "q25": 2.0,
+      "q75": 14.0,
+      "min": 2.0,
+      "max": 14.0,
+      "median": 14.0
+    },
+    "DISTANCE TRAVELED SINCE CODES CLEARED": {
+      "q25": 60.0,
+      "q75": 65520.0,
+      "min": 60.0,
+      "max": 65520.0,
+      "median": 65520.0
+    },
+    "DISTANCE TRAVELED WITH MIL ON": {
+      "q25": 0.0,
+      "q75": 0.0,
+      "min": 0.0,
+      "max": 1000.0,
+      "median": 0.0
+    },
+    "DRIVER'S DEMAND ENGIN - PERCENT TORQUE": {
+      "q25": 90.0,
+      "q75": 95.0,
+      "min": 5.0,
+      "max": 100.0,
+      "median": 90.0
+    },
+    "ENGINE COOLANT TEMPERATURE": {
+      "q25": 10.0,
+      "q75": 90.0,
+      "min": -30.0,
+      "max": 100.0,
+      "median": 80.0
+    },
+    "ENGINE REFERENCE TORQUE": {
+      "q25": 120.0,
+      "q75": 120.0,
+      "min": 120.0,
+      "max": 120.0,
+      "median": 120.0
+    },
+    "rpm": {
+      "q25": 10.0,
+      "q75": 1120.0,
+      "min": 0.0,
+      "max": 9000.0,
+      "median": 840.0
+    },
+    "EXTERNAL BATTERY": {
+      "q25": 37.0,
+      "q75": 44.0,
+      "min": 8.0,
+      "max": 48.0,
+      "median": 39.0
+    },
+    "FUEL AIR COMMANDED EQUIVALENCE RATE": {
+      "q25": 0.1,
+      "q75": 1.1,
+      "min": 0.1,
+      "max": 2.0,
+      "median": 1.0
+    },
+    "FUEL RAIL GAUGE PRESSURE": {
+      "q25": 29000.0,
+      "q75": 29000.0,
+      "min": 0.0,
+      "max": 32000.0,
+      "median": 29000.0
+    },
+    "FUEL SYSTEM STATUS": {
+      "q25": 0.0,
+      "q75": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "median": 0.0
+    },
+    "FUEL TANK LEVEL INPUT": {
+      "q25": 40.0,
+      "q75": 50.0,
+      "min": 10.0,
+      "max": 50.0,
+      "median": 40.0
+    },
+    "FUEL TYPE": {
+      "q25": 0.0,
+      "q75": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "median": 0.0
+    },
+    "HARDWARE STATUS": {
+      "q25": 0.0,
+      "q75": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "median": 0.0
+    },
+    "IDLING": {
+      "q25": 0.0,
+      "q75": 1.0,
+      "min": 0.0,
+      "max": 1.0,
+      "median": 0.0
+    },
+    "IGNITION_STATUS": {
+      "q25": 0.0,
+      "q75": 1.0,
+      "min": 0.0,
+      "max": 1.0,
+      "median": 0.0
+    },
+    "INTAKE MANIFOLD ABSOLUTE PRESSURE": {
+      "q25": 40.0,
+      "q75": 80.0,
+      "min": 0.0,
+      "max": 120.0,
+      "median": 40.0
+    },
+    "INTERNAL BATTERY": {
+      "q25": 88.0,
+      "q75": 94.0,
+      "min": 74.0,
+      "max": 100.0,
+      "median": 94.0
+    },
+    "LONG TERM FUEL TRIM BANK 1": {
+      "q25": 0.0,
+      "q75": 0.0,
+      "min": -40.0,
+      "max": 10.0,
+      "median": 0.0
+    },
+    "MAF AIR FLOW RATE": {
+      "q25": 0.0,
+      "q75": 320.0,
+      "min": 0.0,
+      "max": 320.0,
+      "median": 0.0
+    },
+    "MONITOR STATUS SINCE DTCS CLEARED": {
+      "q25": 0.0,
+      "q75": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "median": 0.0
+    },
+    "MONITOR STATUS THIS DRIVE CYCLE": {
+      "q25": 0.0,
+      "q75": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "median": 0.0
+    },
+    "OBD STANDARDS THIS VEHICLE CONFORMS TO": {
+      "q25": 0.0,
+      "q75": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "median": 0.0
+    },
+    "OXYGEN SENSOR 1 - AB: FUEL AIR EQUIVALENCE RATIO": {
+      "q25": 1.0,
+      "q75": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "median": 1.0
+    },
+    "OXYGEN SENSOR 1 - B: SHORT TERM FUEL TRIM": {
+      "q25": 0.0,
+      "q75": 0.0,
+      "min": 0.0,
+      "max": 40.0,
+      "median": 0.0
+    },
+    "OXYGEN SENSOR 2 - B: SHORT TERM FUEL TRIM": {
+      "q25": 20.0,
+      "q75": 100.0,
+      "min": 20.0,
+      "max": 100.0,
+      "median": 100.0
+    },
+    "OXYGEN SENSORS PRESENT IN 2 BANKS": {
+      "q25": 0.0,
+      "q75": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "median": 0.0
+    },
+    "PIDNameNotAvailable": {
+      "q25": 15.0,
+      "q75": 38.0,
+      "min": 15.0,
+      "max": 38.0,
+      "median": 16.0
+    },
+    "RELATIVE THROTTLE POSITION": {
+      "q25": 1.0,
+      "q75": 4.0,
+      "min": 0.0,
+      "max": 29.0,
+      "median": 3.0
+    },
+    "RUN TIME SINCE ENGINE START": {
+      "q25": 60.0,
+      "q75": 360.0,
+      "min": 0.0,
+      "max": 3180.0,
+      "median": 120.0
+    },
+    "SHORT TERM FUEL TRIM BANK 1": {
+      "q25": 0.0,
+      "q75": 10.0,
+      "min": -40.0,
+      "max": 30.0,
+      "median": 0.0
+    },
+    "THROTTLE POSITION": {
+      "q25": 10.0,
+      "q75": 20.0,
+      "min": 10.0,
+      "max": 40.0,
+      "median": 10.0
+    },
+    "TIMING ADVANCE": {
+      "q25": 0.0,
+      "q75": 20.0,
+      "min": -10.0,
+      "max": 40.0,
+      "median": 10.0
+    },
+    "TOWING": {
+      "q25": 0.0,
+      "q75": 0.0,
+      "min": 0.0,
+      "max": 1.0,
+      "median": 0.0
+    },
+    "speed": {
+      "q25": 0.0,
+      "q75": 10.75,
+      "min": 0.0,
+      "max": 175.0,
+      "median": 1.0
+    },
+    "WARM UPS SINCE CODES CLEARED": {
+      "q25": 2.5,
+      "q75": 255.0,
+      "min": 0.0,
+      "max": 255.0,
+      "median": 255.0
+    },
+    "acceleration": {
+      "q25": 0.0,
+      "q75": 0.0,
+      "min": -170.0,
+      "max": 174.0,
+      "median": 0.0
+    },
+    "rpm_change": {
+      "q25": 0.0,
+      "q75": 0.0,
+      "min": -9000.0,
+      "max": 8990.0,
+      "median": 0.0
+    }
+  },
+  "config": {
+    "iso_forest": {
+      "n_estimators": 200,
+      "contamination": 0.05,
+      "random_state": 42
+    },
+    "lof": {
+      "n_neighbors": 20,
+      "contamination": 0.05,
+      "metric": "minkowski"
+    },
+    "ocsvm": {
+      "kernel": "rbf",
+      "nu": 0.05,
+      "gamma": "scale"
+    }
+  }
+}

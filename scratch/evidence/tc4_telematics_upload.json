@@ -1,0 +1,31 @@
+{
+  "session_id": 42,
+  "summary": {
+    "raw_records": 173853,
+    "processed_records": 974,
+    "columns_detected": 6,
+    "columns_mapped": {
+      "ABSOLUTE LOAD VALUE": "engine_load",
+      "ABSOLUTE THROTTLE POSITION B": "throttle",
+      "AIR INTAKE TEMPERATURE": "coolant_temp",
+      "ENGINE RPM": "rpm",
+      "Vehicle speed": "speed"
+    },
+    "missing_values_handled": 0,
+    "duplicates_handled": 0,
+    "features_generated": [
+      "acceleration",
+      "rpm_change"
+    ]
+  },
+  "analytics_summary": {
+    "total_records": 974,
+    "total_anomalies": 122,
+    "anomaly_rate_pct": 12.53,
+    "strong_anomalies": 4,
+    "consensus_anomalies": 26,
+    "weak_anomalies": 92,
+    "total_episodes": 38
+  },
+  "episodes_count": 38
+}

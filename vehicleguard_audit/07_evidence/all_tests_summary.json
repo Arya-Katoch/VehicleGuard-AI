@@ -1,0 +1,65 @@
+[
+  {
+    "test_id": "TC1",
+    "description": "Standard sample upload",
+    "input": "sample_vehicle_telemetry.csv (120 records)",
+    "expected": "HTTP 200; Summary reports 120 records and two features created (acceleration, rpm_change)",
+    "actual": "HTTP 200, Session ID: 40, Raw Records: 120, Processed Records: 120, Features Generated: ['acceleration', 'rpm_change']",
+    "pass_fail": "PASS",
+    "date": "2026-10-14T20:07:52.092843",
+    "evidence_path": "07_evidence/tc1_standard_upload.json",
+    "session_id": 40
+  },
+  {
+    "test_id": "TC2",
+    "description": "CAN-style sample upload",
+    "input": "sample_can_bus_unstandardized.csv (6 non-standard columns)",
+    "expected": "HTTP 200; Exactly six columns renamed/mapped to canonical features via fuzzy matching",
+    "actual": "HTTP 200, Session ID: 41, Columns Mapped (6): {'time': 'timestamp', 'VehSpd_kmh': 'speed', 'EngineRPM': 'rpm', 'CoolantTemp': 'coolant_temp', 'EngLoad': 'engine_load', 'Throttle_Pos': 'throttle'}",
+    "pass_fail": "PASS",
+    "date": "2026-10-14T20:07:52.354663",
+    "evidence_path": "07_evidence/tc2_can_bus_upload.json",
+    "session_id": 41
+  },
+  {
+    "test_id": "TC3",
+    "description": "Invalid file upload",
+    "input": "test_invalid.txt (plain text file)",
+    "expected": "HTTP 400 validation error ('Only CSV files are allowed.')",
+    "actual": "HTTP 400 Bad Request: {'detail': 'Only CSV files are allowed.'}",
+    "pass_fail": "PASS",
+    "date": "2026-10-14T20:07:52.598482",
+    "evidence_path": "07_evidence/tc3_invalid_upload_response.json"
+  },
+  {
+    "test_id": "TC4",
+    "description": "Long-format dataset upload",
+    "input": "Telematicsdata.csv (173,853 long-format key-value rows)",
+    "expected": "HTTP 200; Long-format pivoted and subsampled to approximately 974 records",
+    "actual": "HTTP 200, Session ID: 42, Raw Rows: 173853, Pivoted/Subsampled Rows: 974, Columns Detected: 6, Features Generated: ['acceleration', 'rpm_change']",
+    "pass_fail": "PASS",
+    "date": "2026-10-14T20:07:52.609116",
+    "evidence_path": "07_evidence/tc4_telematics_upload.json",
+    "session_id": 42
+  },
+  {
+    "test_id": "TC5",
+    "description": "Stream playback",
+    "input": "Active Session ID 40 (/api/stream/40)",
+    "expected": "SSE stream returns event-by-event JSON frames with telemetry, analysis, and incrementing progress",
+    "actual": "SSE text/event-stream active. Received 5 chunks. First event progress: 0.83%, Telemetry keys: ['timestamp', 'speed', 'rpm', 'coolant_temp']...",
+    "pass_fail": "PASS",
+    "date": "2026-10-14T20:07:53.585743",
+    "evidence_path": "07_evidence/tc5_stream_playback_sample.json"
+  },
+  {
+    "test_id": "TC6",
+    "description": "Health-score response",
+    "input": "Telemetry stream analysis for Session ID 40 with 14 anomaly events",
+    "expected": "Health score decreases proportionally to model consensus votes (penalty = votes * 6) and recovers on normal frames (+0.5)",
+    "actual": "Verified state transition formula: votes>0 -> score - (votes*6); votes==0 -> score + 0.5. Initial: 100.0, Min observed: 5.5, End: 9.5. Total anomaly score penalty events: 14. First penalty at frame 35 with 2 votes: 100.0 -> 88.0.",
+    "pass_fail": "PASS",
+    "date": "2026-10-14T20:07:54.866181",
+    "evidence_path": "07_evidence/tc6_health_score_simulation.json"
+  }
+]

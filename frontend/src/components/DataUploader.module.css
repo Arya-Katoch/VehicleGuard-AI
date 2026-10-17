@@ -1,123 +1,464 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+/* =========================================================
+   VehicleGuard-AI Creative Telemetry Ingestion Stage
+   ========================================================= */
+
+.creativeStage {
+  position: relative;
   width: 100%;
-  max-width: 600px;
-}
-
-.header {
-  text-align: center;
-}
-
-.header h2 {
+  min-height: 82vh;
+  border-radius: 24px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--text-primary);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), inset 0 0 100px rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  transition: background-image 0.5s ease-in-out;
+  padding: 2.5rem 1.5rem;
 }
 
-.icon {
-  color: var(--accent-color);
+/* Dark Ambient Radial & Gradient Vignette */
+.stageOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(10, 15, 30, 0.6) 0%, rgba(5, 8, 18, 0.85) 70%, rgba(3, 5, 12, 0.96) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* =========================================================
+   Theme-Specific Stage Treatments
+   ========================================================= */
+
+.theme_holo {
+  border-color: rgba(6, 182, 212, 0.35);
+  box-shadow: 0 0 50px rgba(6, 182, 212, 0.15), inset 0 0 80px rgba(6, 182, 212, 0.1);
+}
+
+.theme_cockpit {
+  border-color: rgba(34, 197, 94, 0.35);
+  box-shadow: 0 0 50px rgba(34, 197, 94, 0.12), inset 0 0 90px rgba(0, 0, 0, 0.9);
+}
+
+.theme_synthwave {
+  border-color: rgba(236, 72, 153, 0.35);
+  box-shadow: 0 0 60px rgba(236, 72, 153, 0.2), inset 0 0 90px rgba(6, 182, 212, 0.15);
+}
+
+.theme_aero {
+  border-color: rgba(148, 163, 184, 0.25);
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.1);
+}
+
+/* CRT Scanlines Overlay for Retro Cockpit */
+.crtScanlines {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.35) 50%
+  ),
+  linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+  z-index: 8;
+  opacity: 0.65;
+}
+
+/* =========================================================
+   Main Central Glassmorphic Console Card
+   ========================================================= */
+
+.uploaderCard {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 660px;
+  background: rgba(10, 17, 34, 0.78);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 20px;
+  padding: 2rem 2.2rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(6, 182, 212, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* In Aero theme: Align card slightly to the right matching sample photo 2 */
+.aeroCardPosition {
+  margin-left: auto;
+  margin-right: 2.5rem;
+  max-width: 580px;
+}
+
+@media (max-width: 1024px) {
+  .aeroCardPosition {
+    margin-right: auto;
+  }
+}
+
+/* Retro Cockpit Terminal Variation */
+.cockpitTerminal {
+  background: rgba(4, 20, 12, 0.88);
+  border: 2px solid rgba(74, 222, 128, 0.5);
+  box-shadow: 0 0 40px rgba(34, 197, 94, 0.25), inset 0 0 30px rgba(34, 197, 94, 0.12);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Sci-Fi Corner Brackets */
+.cornerReticle {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+
+.cornerTL {
+  top: -1px;
+  left: -1px;
+  border-top: 2.5px solid #38bdf8;
+  border-left: 2.5px solid #38bdf8;
+  border-top-left-radius: 20px;
+}
+
+.cornerTR {
+  top: -1px;
+  right: -1px;
+  border-top: 2.5px solid #38bdf8;
+  border-right: 2.5px solid #38bdf8;
+  border-top-right-radius: 20px;
+}
+
+.cornerBL {
+  bottom: -1px;
+  left: -1px;
+  border-bottom: 2.5px solid #38bdf8;
+  border-left: 2.5px solid #38bdf8;
+  border-bottom-left-radius: 20px;
+}
+
+.cornerBR {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2.5px solid #38bdf8;
+  border-right: 2.5px solid #38bdf8;
+  border-bottom-right-radius: 20px;
+}
+
+.cockpitTerminal .cornerReticle {
+  border-color: #4ade80 !important;
+}
+
+/* =========================================================
+   Card Header & Navigation
+   ========================================================= */
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.titleArea {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.titleBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.headerIcon {
+  color: #38bdf8;
+  filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.6));
+}
+
+.headerIconCockpit {
+  color: #4ade80;
+  filter: drop-shadow(0 0 8px rgba(74, 222, 128, 0.6));
+}
+
+.mainTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f8fafc;
+  letter-spacing: -0.02em;
+}
+
+.cockpitTerminal .mainTitle {
+  color: #4ade80;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
 }
 
 .subtitle {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
+  color: #94a3b8;
+  font-size: 0.85rem;
 }
+
+.cockpitTerminal .subtitle {
+  color: #86efac;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
+.tabNav {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(15, 23, 42, 0.7);
+  padding: 0.25rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tabItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  padding: 0.45rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.tabItem:hover {
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.tabActive {
+  background: rgba(56, 189, 248, 0.2) !important;
+  color: #38bdf8 !important;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+.cockpitTerminal .tabActive {
+  background: rgba(74, 222, 128, 0.2) !important;
+  color: #4ade80 !important;
+  border-color: rgba(74, 222, 128, 0.4);
+}
+
+.activeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 6px #10b981;
+}
+
+/* =========================================================
+   Topographic Radar Dropzone
+   ========================================================= */
 
 .dropzone {
-  border: 2px dashed rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  padding: 3rem 2rem;
+  position: relative;
+  border: 2px dashed rgba(56, 189, 248, 0.45);
+  border-radius: 16px;
+  padding: 2.8rem 1.8rem;
   text-align: center;
   cursor: pointer;
-  transition: all 0.3s ease;
-  background: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  background: rgba(10, 20, 42, 0.45);
+  overflow: hidden;
+  box-shadow: inset 0 0 30px rgba(6, 182, 212, 0.08);
 }
 
-.dropzone:hover, .dragging {
-  border-color: var(--accent-color);
-  background: rgba(59, 130, 246, 0.1);
+.dropzone:hover,
+.dragging {
+  border-color: #38bdf8;
+  background: rgba(14, 165, 233, 0.12);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.25), inset 0 0 35px rgba(56, 189, 248, 0.12);
+  transform: translateY(-1px);
+}
+
+.dropzoneCockpit {
+  border-color: rgba(74, 222, 128, 0.45);
+  background: rgba(4, 30, 15, 0.5);
+  box-shadow: inset 0 0 30px rgba(74, 222, 128, 0.1);
+}
+
+.dropzoneCockpit:hover {
+  border-color: #4ade80;
+  background: rgba(34, 197, 94, 0.12);
+  box-shadow: 0 0 25px rgba(74, 222, 128, 0.3), inset 0 0 35px rgba(74, 222, 128, 0.15);
 }
 
 .hasFile {
   border-style: solid;
-  border-color: var(--success-color);
-  background: rgba(16, 185, 129, 0.05);
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.08);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.2), inset 0 0 20px rgba(16, 185, 129, 0.08);
 }
 
-.fileIcon {
-  color: var(--text-secondary);
-  margin-bottom: 1rem;
-}
-
-.dropContent p {
-  color: var(--text-primary);
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.hint {
-  font-size: 0.8rem;
-  color: var(--text-secondary) !important;
-}
-
-.fileContent {
+.dropContent {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
 }
 
-.successIcon {
-  color: var(--success-color);
+.iconCircle {
+  position: relative;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 0.5rem;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+  transition: transform 0.25s ease;
+}
+
+.dropzone:hover .iconCircle {
+  transform: scale(1.08);
+}
+
+.fileIcon {
+  color: #38bdf8;
+  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.5));
+}
+
+.cornerUploadArrow {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #38bdf8;
+}
+
+.dropPrompt {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #f8fafc;
+  letter-spacing: -0.01em;
+}
+
+.cockpitTerminal .dropPrompt {
+  color: #4ade80;
+  text-shadow: 0 0 8px rgba(74, 222, 128, 0.5);
+}
+
+.hint {
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+
+.cockpitTerminal .hint {
+  color: #86efac;
+}
+
+.fileContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.successBadge {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+}
+
+.successIcon {
+  color: #10b981;
+}
+
+.fileInfo {
+  text-align: center;
 }
 
 .filename {
+  font-size: 1.05rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: #f8fafc;
 }
 
 .filesize {
   font-size: 0.8rem;
-  color: var(--text-secondary);
+  color: #94a3b8;
+  margin-top: 0.15rem;
 }
 
 .removeBtn {
-  margin-top: 1rem;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--text-secondary);
-  padding: 0.25rem 0.75rem;
-  border-radius: 4px;
+  margin-top: 0.5rem;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: #f87171;
+  padding: 0.35rem 0.9rem;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 0.8rem;
-  transition: all 0.2s;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 .removeBtn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--text-primary);
+  background: rgba(239, 68, 68, 0.25);
+  color: #ffffff;
+  border-color: #ef4444;
 }
 
+/* =========================================================
+   Action Upload Button
+   ========================================================= */
+
 .uploadBtn {
-  background: var(--accent-color);
-  color: white;
-  border: none;
-  padding: 1rem;
-  border-radius: 8px;
+  background: linear-gradient(135deg, #0284c7, #06b6d4);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.95rem 1.5rem;
+  border-radius: 12px;
   font-weight: 600;
+  font-size: 0.95rem;
   cursor: pointer;
-  transition: background 0.2s;
-  width: 100%;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .uploadBtn:hover:not(:disabled) {
-  background: #2563eb;
+  background: linear-gradient(135deg, #0369a1, #0891b2);
+  box-shadow: 0 6px 28px rgba(6, 182, 212, 0.55);
+  transform: translateY(-1px);
 }
 
 .uploadBtn:disabled {
@@ -125,57 +466,170 @@
   cursor: not-allowed;
 }
 
+.cockpitTerminal .uploadBtn {
+  background: linear-gradient(135deg, #15803d, #16a34a);
+  border-color: #4ade80;
+  color: #052e16;
+  font-weight: 700;
+  box-shadow: 0 0 20px rgba(74, 222, 128, 0.4);
+}
+
+.processingText {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.spinIcon {
+  animation: spinSlow 3s linear infinite;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .error {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--danger-color);
-  font-size: 0.9rem;
-  padding: 0.75rem;
-  background: rgba(239, 68, 68, 0.1);
-  border-radius: 6px;
-  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #f87171;
+  font-size: 0.88rem;
+  padding: 0.75rem 1rem;
+  background: rgba(239, 68, 68, 0.12);
+  border-radius: 8px;
+  border: 1px solid rgba(239, 68, 68, 0.3);
 }
 
+/* =========================================================
+   Instant Sample Datasets Row (Matched to Sample Photos)
+   ========================================================= */
+
 .samplesSection {
-  margin-top: 1rem;
-  text-align: center;
+  margin-top: 0.25rem;
+}
+
+.dividerRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.25), transparent);
 }
 
 .samplesTitle {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.75rem;
+  font-size: 0.78rem;
+  color: #64748b;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.cockpitTerminal .samplesTitle {
+  color: #86efac;
 }
 
 .sampleButtons {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.75rem;
-  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .sampleButtons {
+    grid-template-columns: 1fr;
+  }
 }
 
 .sampleBtn {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: var(--text-primary);
-  padding: 0.6rem 1rem;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  font-weight: 500;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.7rem 0.85rem;
+  border-radius: 12px;
   cursor: pointer;
-  transition: all 0.2s ease;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.65rem;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: left;
 }
 
-.sampleBtn:hover:not(:disabled) {
-  background: rgba(59, 130, 246, 0.2);
-  border-color: var(--accent-color);
-  color: #fff;
-  transform: translateY(-1px);
+.sampleIconWrapper {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.sampleBtn:hover:not(:disabled) .sampleIconWrapper {
+  transform: scale(1.1);
+}
+
+.sampleTextCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.sampleLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  line-height: 1.2;
+}
+
+.sampleSub {
+  font-size: 0.7rem;
+  color: #94a3b8;
+}
+
+/* Button 1: Telematics (Pink/Magenta accent) */
+.btnTelematics {
+  border-color: rgba(236, 72, 153, 0.3);
+}
+
+.btnTelematics:hover:not(:disabled) {
+  background: rgba(236, 72, 153, 0.15);
+  border-color: #ec4899;
+  box-shadow: 0 0 16px rgba(236, 72, 153, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Button 2: Standard Telemetry (Cyan/Sky Blue accent) */
+.btnStandard {
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.btnStandard:hover:not(:disabled) {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: #38bdf8;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Button 3: Raw CAN-Bus (Emerald Green accent) */
+.btnCanbus {
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.btnCanbus:hover:not(:disabled) {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: #10b981;
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.35);
+  transform: translateY(-2px);
 }
 
 .sampleBtn:disabled {
@@ -183,3 +637,22 @@
   cursor: not-allowed;
 }
 
+/* =========================================================
+   Floating Creative Theme Switcher Dock
+   ========================================================= */
+
+.themeSwitcherWrapper {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.5rem;
+  z-index: 30;
+}
+
+@media (max-width: 768px) {
+  .themeSwitcherWrapper {
+    position: static;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+}

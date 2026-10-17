@@ -1,6 +1,5 @@
-"use client";
 import React from 'react';
-import { Database, FileCheck, Info, Play, TrendingUp } from 'lucide-react';
+import { Database, FileCheck, Info, Play, TrendingUp, ArrowLeft } from 'lucide-react';
 import styles from './DataTransformationSummary.module.css';
 
 interface SummaryData {
@@ -15,10 +14,12 @@ interface SummaryData {
 
 export default function DataTransformationSummary({ 
   summary, 
-  onStartPlayback 
+  onStartPlayback,
+  onBack,
 }: { 
   summary: SummaryData;
   onStartPlayback: () => void;
+  onBack?: () => void;
 }) {
   return (
     <div className={`glass-panel ${styles.container}`}>
@@ -89,9 +90,16 @@ export default function DataTransformationSummary({
         <div className={styles.infoText}>
           <Info size={16} /> Data is standardized and ML models are trained.
         </div>
-        <button className={styles.playBtn} onClick={onStartPlayback}>
-          <Play size={20} fill="currentColor" /> Start Live Monitoring
-        </button>
+        <div className={styles.buttonRow}>
+          {onBack && (
+            <button className={styles.backBtn} onClick={onBack} type="button" id="summary-back-btn">
+              <ArrowLeft size={18} /> Back to Ingestion
+            </button>
+          )}
+          <button className={styles.playBtn} onClick={onStartPlayback} type="button" id="start-live-monitoring-btn">
+            <Play size={20} fill="currentColor" /> Start Live Monitoring
+          </button>
+        </div>
       </div>
     </div>
   );

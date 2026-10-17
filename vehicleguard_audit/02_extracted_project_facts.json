@@ -1,0 +1,939 @@
+{
+  "metadata": {
+    "project_name": "VehicleGuard AI",
+    "project_subtitle": "Unsupervised Multi-Model Vehicle Telemetry Anomaly Detection System",
+    "degree": "Bachelor of Engineering in Computer Science & Engineering (B.E. CSE)",
+    "audit_timestamp": "2026-10-14T20:10:00+05:30",
+    "auditor_role": "Senior Python Developer, ML Engineer, Software Tester & Research Report Data Analyst",
+    "git_commit_head": "8e0137abb638395001ab3aa14be6d235fe49c2f6",
+    "git_initial_commit": "44cdf7939651cf60253dcb8c2aee15934204bafd",
+    "lead_developer_and_author": {
+      "name": "Arya Katoch",
+      "email": "aryakatoch@gmail.com",
+      "source": "git log -n 2",
+      "status": "verified_from_code"
+    }
+  },
+  "experimental_environment": {
+    "operating_system": {
+      "caption": "Microsoft Windows 11 Home Single Language",
+      "version": "10.0.26300",
+      "architecture": "64-bit",
+      "source": "Get-CimInstance Win32_OperatingSystem",
+      "status": "verified_by_execution"
+    },
+    "cpu": {
+      "model": "AMD Ryzen 5 5600H with Radeon Graphics",
+      "cores": 6,
+      "logical_processors": 12,
+      "source": "Get-CimInstance Win32_Processor",
+      "status": "verified_by_execution"
+    },
+    "memory_ram": {
+      "total_visible_memory_kb": 24486140,
+      "total_visible_memory_gb": 23.35,
+      "free_physical_memory_kb": 9702240,
+      "source": "Get-CimInstance Win32_OperatingSystem",
+      "status": "verified_by_execution"
+    },
+    "runtimes": {
+      "python": {
+        "version": "3.11.9",
+        "executable": "backend/venv/Scripts/python.exe",
+        "source": "python -V",
+        "status": "verified_by_execution"
+      },
+      "node": {
+        "version": "v24.13.0",
+        "source": "node -v",
+        "status": "verified_by_execution"
+      },
+      "npm": {
+        "version": "11.6.2",
+        "source": "npm -v",
+        "status": "verified_by_execution"
+      }
+    },
+    "backend_dependencies": {
+      "fastapi": {
+        "version": "0.141.1",
+        "source": "pip list",
+        "status": "verified_by_execution"
+      },
+      "uvicorn": {
+        "version": "0.53.0",
+        "source": "pip list",
+        "status": "verified_by_execution"
+      },
+      "scikit-learn": {
+        "version": "1.9.1",
+        "source": "pip list",
+        "status": "verified_by_execution"
+      },
+      "pandas": {
+        "version": "3.0.6",
+        "source": "pip list",
+        "status": "verified_by_execution"
+      },
+      "numpy": {
+        "version": "2.4.6",
+        "source": "pip list",
+        "status": "verified_by_execution"
+      },
+      "scipy": {
+        "version": "1.17.1",
+        "source": "pip list",
+        "status": "verified_by_execution"
+      },
+      "sqlalchemy": {
+        "version": "2.0.54",
+        "source": "pip list",
+        "status": "verified_by_execution"
+      },
+      "thefuzz": {
+        "version": "0.22.1",
+        "source": "pip list",
+        "status": "verified_by_execution"
+      },
+      "Levenshtein": {
+        "version": "0.27.5",
+        "source": "pip list",
+        "status": "verified_by_execution"
+      },
+      "pydantic": {
+        "version": "2.13.5",
+        "source": "pip list",
+        "status": "verified_by_execution"
+      },
+      "python-multipart": {
+        "version": "0.0.32",
+        "source": "pip list",
+        "status": "verified_by_execution"
+      },
+      "starlette": {
+        "version": "1.6.0",
+        "source": "pip list",
+        "status": "verified_by_execution"
+      }
+    },
+    "frontend_dependencies": {
+      "next": {
+        "version": "16.3.5",
+        "source": "frontend/package.json",
+        "status": "verified_from_code"
+      },
+      "react": {
+        "version": "19.2.8",
+        "source": "frontend/package.json",
+        "status": "verified_from_code"
+      },
+      "react-dom": {
+        "version": "19.2.8",
+        "source": "frontend/package.json",
+        "status": "verified_from_code"
+      },
+      "recharts": {
+        "version": "^3.10.1",
+        "source": "frontend/package.json",
+        "status": "verified_from_code"
+      },
+      "axios": {
+        "version": "^1.20.0",
+        "source": "frontend/package.json",
+        "status": "verified_from_code"
+      },
+      "lucide-react": {
+        "version": "^1.47.0",
+        "source": "frontend/package.json",
+        "status": "verified_from_code"
+      },
+      "typescript": {
+        "version": "^5",
+        "source": "frontend/package.json",
+        "status": "verified_from_code"
+      }
+    }
+  },
+  "data_processing_pipeline": {
+    "canonical_standard_features": {
+      "speed": [
+        "speed",
+        "vehspd",
+        "velocity",
+        "kmh",
+        "mph",
+        "vehicle_speed",
+        "vehicle speed"
+      ],
+      "rpm": [
+        "rpm",
+        "engine_speed",
+        "enginerpm",
+        "engine_rpm",
+        "engine rpm"
+      ],
+      "engine_load": [
+        "load",
+        "engine_load",
+        "engload",
+        "engine load",
+        "calculated engine load",
+        "absolute load value"
+      ],
+      "coolant_temp": [
+        "coolant",
+        "temp",
+        "temperature",
+        "ect",
+        "coolant_temp",
+        "engine coolant temperature",
+        "ambient air temperature"
+      ],
+      "throttle": [
+        "throttle",
+        "pedal",
+        "accel_pos",
+        "throttle_pos",
+        "throttle position",
+        "relative throttle position",
+        "absolute throttle position b"
+      ],
+      "timestamp": [
+        "time",
+        "timestamp",
+        "date",
+        "datetime",
+        "timemili"
+      ]
+    },
+    "source_file": "backend/data_processor.py",
+    "fuzzy_matching_scorer": "thefuzz.fuzz.token_sort_ratio",
+    "fuzzy_threshold_score": 75,
+    "long_format_pivoting": {
+      "condition": "'variable' in cols_lower and 'value' in cols_lower",
+      "time_column_precedence": [
+        "timestamp",
+        "timemili",
+        "time",
+        "date"
+      ],
+      "aggregation_function": "first",
+      "post_pivot_imputation": ".ffill().bfill()",
+      "source": "backend/data_processor.py:L38-L53",
+      "status": "verified_from_code"
+    },
+    "timestamp_conversion": {
+      "logic": "pd.to_datetime(df['timestamp'], errors='coerce') -> (ts - ts[0]).dt.total_seconds().fillna(0.0)",
+      "integer_behavior_note": "Interprets integer timestamps as nanoseconds since Unix epoch, producing fractional seconds (e.g. 35 -> 3.5e-8 s)",
+      "fallback": "np.arange(len(df), dtype=float)",
+      "source": "backend/data_processor.py:L54-L62",
+      "status": "verified_from_code"
+    },
+    "subsampling": {
+      "condition": "len(df) > 1000",
+      "formula": "step = int(np.ceil(len(df) / 1000.0)); df = df.iloc[::step].reset_index(drop=True)",
+      "source": "backend/data_processor.py:L64-L67",
+      "status": "verified_from_code"
+    },
+    "missing_value_imputation": {
+      "method": "Median imputation for numerical columns; fallback to 0.0 if median is NaN",
+      "source": "backend/data_processor.py:L95-L105",
+      "status": "verified_from_code"
+    },
+    "duplicate_handling": {
+      "method": "df.drop_duplicates(inplace=True)",
+      "source": "backend/data_processor.py:L107-L109",
+      "status": "verified_from_code"
+    },
+    "feature_engineering": {
+      "acceleration": {
+        "formula": "diff(speed) / dt (where dt is implicitly 1 step in code: pd.to_numeric(speed_series).diff().fillna(0.0))",
+        "units": "Speed units delta per sample step (e.g., km/h per frame)",
+        "source": "backend/data_processor.py:L112-L120",
+        "status": "verified_from_code"
+      },
+      "rpm_change": {
+        "formula": "diff(rpm) / dt (implicitly 1 step: pd.to_numeric(rpm_series).diff().fillna(0.0))",
+        "units": "RPM delta per sample step",
+        "source": "backend/data_processor.py:L121-L128",
+        "status": "verified_from_code"
+      }
+    }
+  },
+  "ml_ensemble": {
+    "source_file": "backend/ml_engine.py",
+    "feature_scaling": {
+      "method": "sklearn.preprocessing.StandardScaler",
+      "formula": "Z = (X - mu) / sigma",
+      "source": "backend/ml_engine.py:L48, L170",
+      "status": "verified_from_code"
+    },
+    "models": {
+      "isolation_forest": {
+        "class": "sklearn.ensemble.IsolationForest",
+        "default_params": {
+          "n_estimators": 200,
+          "contamination": 0.05,
+          "random_state": 42
+        },
+        "allowed_ranges": {
+          "n_estimators": "[10, 1000] (int)",
+          "contamination": "[0.001, 0.5] (float)",
+          "random_state": "int"
+        },
+        "source": "backend/ml_engine.py:L29-L33, L71-L84, L122-L126",
+        "status": "verified_from_code"
+      },
+      "lof": {
+        "class": "sklearn.neighbors.LocalOutlierFactor",
+        "default_params": {
+          "n_neighbors": 20,
+          "contamination": 0.05,
+          "metric": "minkowski",
+          "novelty": true
+        },
+        "allowed_ranges": {
+          "n_neighbors": "[2, 200] (int)",
+          "contamination": "[0.001, 0.5] (float)",
+          "metric": "['minkowski', 'euclidean', 'manhattan']",
+          "novelty": "fixed to True to support inductive predict() on streaming frames"
+        },
+        "source": "backend/ml_engine.py:L34-L38, L86-L99, L128-L133",
+        "status": "verified_from_code"
+      },
+      "one_class_svm": {
+        "class": "sklearn.svm.OneClassSVM",
+        "default_params": {
+          "kernel": "rbf",
+          "nu": 0.05,
+          "gamma": "scale"
+        },
+        "allowed_ranges": {
+          "kernel": "['rbf', 'linear', 'poly', 'sigmoid']",
+          "nu": "[0.001, 0.5] (float)",
+          "gamma": "['scale', 'auto'] or float > 0"
+        },
+        "source": "backend/ml_engine.py:L39-L43, L101-L114, L135-L139",
+        "status": "verified_from_code"
+      }
+    }
+  },
+  "novel_formulations": {
+    "consensus_voting_matrix": {
+      "formula": "votes = sum(I(y_m == -1)) for m in [IsolationForest, LOF, OneClassSVM]",
+      "categories": {
+        "0": {
+          "severity": "normal",
+          "description": "All 3 models agree nominal"
+        },
+        "1": {
+          "severity": "weak_anomaly",
+          "description": "1 model flag (minor edge / noise)"
+        },
+        "2": {
+          "severity": "consensus_anomaly",
+          "description": "2 models agree (genuine deviation)"
+        },
+        "3": {
+          "severity": "strong_anomaly",
+          "description": "3 models unanimous consensus (critical failure)"
+        }
+      },
+      "source": "backend/ml_engine.py:L235-L243",
+      "status": "verified_from_code"
+    },
+    "deterministic_confidence_score": {
+      "base_confidence": {
+        "0_votes": 0.0,
+        "1_vote": 50.0,
+        "2_votes": 75.0,
+        "3_votes": 90.0
+      },
+      "z_score_bonus_formula": "bonus = min(10.0, max(0.0, (max_z_score - 2.0) * 3.0))",
+      "total_confidence_formula": "confidence = min(100.0, base_confidence + bonus), rounded to 1 decimal place",
+      "source": "backend/ml_engine.py:L197-L218",
+      "status": "verified_from_code"
+    },
+    "feature_contribution_weighting": {
+      "formula": "w_i = (|z_i| / sum(|z_j|)) * 100%",
+      "source": "backend/ml_engine.py:L252-L265",
+      "status": "verified_from_code"
+    },
+    "dynamic_explanation_generation": {
+      "template": "{primary_feature} (value: {val}) significantly deviated from normal baseline (z-score: {max_z:.2f}) and was classified as anomalous by {votes} of 3 models ({models_str}).",
+      "source": "backend/ml_engine.py:L268-L287",
+      "status": "verified_from_code"
+    },
+    "episode_windowing_algorithm": {
+      "gap_threshold": 2,
+      "rule": "Group consecutive or near-consecutive anomalous records where (p[index] - last_p[index]) <= (gap_threshold + 1), i.e. <= 3 index distance (allowing up to 2 normal frames between)",
+      "duration_calculation": "abs(end_ts - start_ts); if duration == 0: duration = round(len(ep_records) * 0.3, 2)",
+      "peak_metrics": "max observed value per affected feature during episode",
+      "normal_ranges": "trip-wide baseline 25th percentile (Q1), 75th percentile (Q3), min, max, median",
+      "source": "backend/ml_engine.py:L446-L463, L510-L548",
+      "status": "verified_from_code"
+    },
+    "vehicle_health_score_state_machine": {
+      "initial_value": 100.0,
+      "bounds": "[0.0, 100.0]",
+      "on_anomaly_frame": "score = max(0, prev - (analysis.votes * 6))",
+      "on_normal_frame": "score = min(100, prev + 0.5)",
+      "source": "frontend/src/components/Dashboard.tsx:L79-L97",
+      "status": "verified_from_code"
+    }
+  },
+  "database_schema": {
+    "engine": "sqlite:///./vehicleguard.db",
+    "tables": {
+      "sessions": {
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "primary_key": true,
+            "nullable": false,
+            "default": null
+          },
+          {
+            "name": "filename",
+            "type": "VARCHAR",
+            "primary_key": false,
+            "nullable": true,
+            "default": null
+          },
+          {
+            "name": "created_at",
+            "type": "DATETIME",
+            "primary_key": false,
+            "nullable": true,
+            "default": "datetime.datetime.utcnow"
+          },
+          {
+            "name": "status",
+            "type": "VARCHAR",
+            "primary_key": false,
+            "nullable": true,
+            "default": "'processing'"
+          },
+          {
+            "name": "summary",
+            "type": "JSON",
+            "primary_key": false,
+            "nullable": true,
+            "default": null
+          }
+        ],
+        "row_count_in_db": 38,
+        "source": "backend/models.py:L5-L11; backend/vehicleguard.db",
+        "status": "verified_from_code_and_db"
+      },
+      "anomaly_logs": {
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "primary_key": true,
+            "nullable": false,
+            "default": null
+          },
+          {
+            "name": "session_id",
+            "type": "INTEGER",
+            "primary_key": false,
+            "nullable": true,
+            "default": null,
+            "foreign_key_logical": "sessions.id"
+          },
+          {
+            "name": "timestamp",
+            "type": "FLOAT",
+            "primary_key": false,
+            "nullable": true,
+            "default": null
+          },
+          {
+            "name": "severity",
+            "type": "VARCHAR",
+            "primary_key": false,
+            "nullable": true,
+            "default": null
+          },
+          {
+            "name": "details",
+            "type": "JSON",
+            "primary_key": false,
+            "nullable": true,
+            "default": null
+          }
+        ],
+        "row_count_in_db": 1294,
+        "source": "backend/models.py:L13-L19; backend/vehicleguard.db",
+        "status": "verified_from_code_and_db"
+      },
+      "anomaly_episodes": {
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "primary_key": true,
+            "nullable": false,
+            "default": null
+          },
+          {
+            "name": "session_id",
+            "type": "INTEGER",
+            "primary_key": false,
+            "nullable": true,
+            "default": null,
+            "foreign_key_logical": "sessions.id"
+          },
+          {
+            "name": "episode_number",
+            "type": "INTEGER",
+            "primary_key": false,
+            "nullable": true,
+            "default": null
+          },
+          {
+            "name": "start_time",
+            "type": "FLOAT",
+            "primary_key": false,
+            "nullable": true,
+            "default": null
+          },
+          {
+            "name": "end_time",
+            "type": "FLOAT",
+            "primary_key": false,
+            "nullable": true,
+            "default": null
+          },
+          {
+            "name": "duration_seconds",
+            "type": "FLOAT",
+            "primary_key": false,
+            "nullable": true,
+            "default": null
+          },
+          {
+            "name": "record_count",
+            "type": "INTEGER",
+            "primary_key": false,
+            "nullable": true,
+            "default": null
+          },
+          {
+            "name": "severity",
+            "type": "VARCHAR",
+            "primary_key": false,
+            "nullable": true,
+            "default": null
+          },
+          {
+            "name": "peak_confidence",
+            "type": "FLOAT",
+            "primary_key": false,
+            "nullable": true,
+            "default": null
+          },
+          {
+            "name": "affected_features",
+            "type": "JSON",
+            "primary_key": false,
+            "nullable": true,
+            "default": null
+          },
+          {
+            "name": "details",
+            "type": "JSON",
+            "primary_key": false,
+            "nullable": true,
+            "default": null
+          }
+        ],
+        "row_count_in_db": 825,
+        "source": "backend/models.py:L21-L33; backend/vehicleguard.db",
+        "status": "verified_from_code_and_db"
+      },
+      "model_config_logs": {
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "primary_key": true,
+            "nullable": false,
+            "default": null
+          },
+          {
+            "name": "session_id",
+            "type": "INTEGER",
+            "primary_key": false,
+            "nullable": true,
+            "default": null,
+            "foreign_key_logical": "sessions.id"
+          },
+          {
+            "name": "created_at",
+            "type": "DATETIME",
+            "primary_key": false,
+            "nullable": true,
+            "default": "datetime.datetime.utcnow"
+          },
+          {
+            "name": "config",
+            "type": "JSON",
+            "primary_key": false,
+            "nullable": true,
+            "default": null
+          },
+          {
+            "name": "metrics",
+            "type": "JSON",
+            "primary_key": false,
+            "nullable": true,
+            "default": null
+          }
+        ],
+        "row_count_in_db": 5,
+        "source": "backend/models.py:L35-L42; backend/vehicleguard.db",
+        "status": "verified_from_code_and_db"
+      }
+    },
+    "schema_observation": "No formal SQLite foreign key constraints (PRAGMA foreign_keys) or CASCADE deletes exist in models.py; keys are logical indexed integers."
+  },
+  "api_specification": {
+    "base_url": "http://127.0.0.1:8000",
+    "endpoints": [
+      {
+        "endpoint": "/api/health",
+        "method": "GET",
+        "params": "None",
+        "body": "None",
+        "response": {
+          "status": "ok",
+          "service": "VehicleGuard AI Core API",
+          "version": "2.0.0"
+        },
+        "status_code": 200,
+        "source": "backend/main.py:L84-L86",
+        "verified_by_test": true
+      },
+      {
+        "endpoint": "/api/upload",
+        "method": "POST",
+        "params": "None",
+        "body": "multipart/form-data: file (UploadFile, CSV required)",
+        "response": {
+          "session_id": "int",
+          "summary": "dict",
+          "analytics_summary": "dict",
+          "episodes_count": "int"
+        },
+        "status_code": 200,
+        "error_codes": [
+          400,
+          500
+        ],
+        "source": "backend/main.py:L88-L153",
+        "verified_by_test": true
+      },
+      {
+        "endpoint": "/api/sessions/{session_id}",
+        "method": "GET",
+        "params": "session_id (path, int)",
+        "body": "None",
+        "response": "Session model object (id, filename, created_at, status, summary)",
+        "status_code": 200,
+        "error_codes": [
+          404
+        ],
+        "source": "backend/main.py:L154-L159",
+        "verified_by_test": true
+      },
+      {
+        "endpoint": "/api/sessions/{session_id}/analytics",
+        "method": "GET",
+        "params": "session_id (path, int)",
+        "body": "None",
+        "response": "Full analytics JSON (summary_stats, episodes, model_comparison, model_agreement_distribution, most_affected_features, anomalies_over_time, normal_ranges, config)",
+        "status_code": 200,
+        "error_codes": [
+          404,
+          500
+        ],
+        "source": "backend/main.py:L161-L164",
+        "verified_by_test": true
+      },
+      {
+        "endpoint": "/api/sessions/{session_id}/episodes",
+        "method": "GET",
+        "params": "session_id (path, int)",
+        "body": "None",
+        "response": "List of grouped anomaly episode objects",
+        "status_code": 200,
+        "error_codes": [
+          404,
+          500
+        ],
+        "source": "backend/main.py:L166-L169",
+        "verified_by_test": true
+      },
+      {
+        "endpoint": "/api/sessions/{session_id}/models",
+        "method": "GET",
+        "params": "session_id (path, int)",
+        "body": "None",
+        "response": {
+          "config": "dict",
+          "model_comparison": "dict",
+          "model_agreement_distribution": "dict"
+        },
+        "status_code": 200,
+        "error_codes": [
+          404,
+          500
+        ],
+        "source": "backend/main.py:L171-L179",
+        "verified_by_test": true
+      },
+      {
+        "endpoint": "/api/sessions/{session_id}/models/retrain",
+        "method": "POST",
+        "params": "session_id (path, int)",
+        "body": "application/json: config (iso_forest, lof, ocsvm hyperparameter dict)",
+        "response": {
+          "status": "success",
+          "message": "str",
+          "config": "dict",
+          "model_comparison": "dict",
+          "analytics_summary": "dict",
+          "analytics": "dict"
+        },
+        "status_code": 200,
+        "error_codes": [
+          404,
+          500
+        ],
+        "source": "backend/main.py:L180-L232",
+        "verified_by_test": true
+      },
+      {
+        "endpoint": "/api/stream/{session_id}",
+        "method": "GET",
+        "params": "session_id (path, int)",
+        "body": "None",
+        "response": "text/event-stream (SSE event chunks with telemetry, analysis, progress)",
+        "status_code": 200,
+        "error_codes": [
+          404,
+          500
+        ],
+        "source": "backend/main.py:L234-L267",
+        "verified_by_test": true
+      },
+      {
+        "endpoint": "/api/sessions/{session_id}/anomalies",
+        "method": "GET",
+        "params": "session_id (path, int)",
+        "body": "None",
+        "response": "List of logged anomaly records from anomaly_logs table",
+        "status_code": 200,
+        "source": "backend/main.py:L269-L272",
+        "verified_by_test": true
+      }
+    ]
+  },
+  "experimental_dataset_results": {
+    "dataset_120_records": {
+      "filename": "sample_vehicle_telemetry.csv",
+      "raw_records": 120,
+      "processed_records": 120,
+      "denominator": 120,
+      "total_anomalies": 14,
+      "anomaly_rate_pct": 11.67,
+      "normal_records": 106,
+      "normal_rate_pct": 88.33,
+      "severity_counts": {
+        "strong_anomalies": 0,
+        "consensus_anomalies": 7,
+        "weak_anomalies": 7
+      },
+      "per_model_comparison": {
+        "isolation_forest": {
+          "anomalies_detected": 6,
+          "anomalies_pct": 5.0,
+          "normal_detected": 114,
+          "normal_pct": 95.0,
+          "consensus_agreement_pct": 97.5,
+          "runtime_ms": 231.98
+        },
+        "lof": {
+          "anomalies_detected": 5,
+          "anomalies_pct": 4.17,
+          "normal_detected": 115,
+          "normal_pct": 95.83,
+          "consensus_agreement_pct": 98.3,
+          "runtime_ms": 8.31
+        },
+        "ocsvm": {
+          "anomalies_detected": 10,
+          "anomalies_pct": 8.33,
+          "normal_detected": 110,
+          "normal_pct": 91.67,
+          "consensus_agreement_pct": 92.5,
+          "runtime_ms": 1.3
+        }
+      },
+      "model_agreement_distribution": {
+        "all_3_models": 0,
+        "if_and_lof": 3,
+        "if_and_svm": 2,
+        "lof_and_svm": 2,
+        "only_if": 1,
+        "only_lof": 0,
+        "only_svm": 6,
+        "normal": 106,
+        "sum_check": 120
+      },
+      "episodes_count": 7,
+      "injected_faults_validation": {
+        "total_injected_records": 10,
+        "true_positives": 7,
+        "false_negatives": 3,
+        "false_positives": 7,
+        "true_negatives": 103,
+        "precision_pct": 50.0,
+        "recall_pct": 70.0,
+        "f1_score_pct": 58.33,
+        "event_level_detection_rate": "3 of 3 events detected (100.0%)"
+      }
+    },
+    "dataset_telematics": {
+      "filename": "Telematicsdata.csv",
+      "raw_records": 173853,
+      "raw_columns": 6,
+      "pivoted_and_subsampled_records": 974,
+      "final_columns": 54,
+      "denominator": 974,
+      "columns_mapped": {
+        "ABSOLUTE LOAD VALUE": "engine_load",
+        "ABSOLUTE THROTTLE POSITION B": "throttle",
+        "AIR INTAKE TEMPERATURE": "coolant_temp",
+        "ENGINE RPM": "rpm",
+        "Vehicle speed": "speed"
+      },
+      "features_generated": [
+        "acceleration",
+        "rpm_change"
+      ],
+      "missing_values_handled": 0,
+      "duplicates_handled": 0,
+      "total_anomalies": 122,
+      "anomaly_rate_pct": 12.53,
+      "normal_records": 852,
+      "normal_rate_pct": 87.47,
+      "severity_counts": {
+        "strong_anomalies": 4,
+        "consensus_anomalies": 26,
+        "weak_anomalies": 92
+      },
+      "per_model_comparison": {
+        "isolation_forest": {
+          "anomalies_detected": 49,
+          "anomalies_pct": 5.03,
+          "normal_detected": 925,
+          "normal_pct": 94.97,
+          "consensus_agreement_pct": 97.8,
+          "runtime_ms": 213.09
+        },
+        "lof": {
+          "anomalies_detected": 42,
+          "anomalies_pct": 4.31,
+          "normal_detected": 932,
+          "normal_pct": 95.69,
+          "consensus_agreement_pct": 93.6,
+          "runtime_ms": 61.19
+        },
+        "ocsvm": {
+          "anomalies_detected": 65,
+          "anomalies_pct": 6.67,
+          "normal_detected": 909,
+          "normal_pct": 93.33,
+          "consensus_agreement_pct": 96.4,
+          "runtime_ms": 7.4
+        }
+      },
+      "model_agreement_distribution": {
+        "all_3_models": 4,
+        "if_and_lof": 0,
+        "if_and_svm": 25,
+        "lof_and_svm": 1,
+        "only_if": 20,
+        "only_lof": 37,
+        "only_svm": 35,
+        "normal": 852,
+        "sum_check": 974
+      },
+      "total_episodes": 38,
+      "top_5_affected_features": [
+        {
+          "feature": "OXYGEN SENSOR 1 - B: SHORT TERM FUEL TRIM",
+          "count": 14,
+          "avg_z_score": 6.38
+        },
+        {
+          "feature": "EXTERNAL BATTERY",
+          "count": 11,
+          "avg_z_score": 4.01
+        },
+        {
+          "feature": "TOWING",
+          "count": 11,
+          "avg_z_score": 3.04
+        },
+        {
+          "feature": "engine_load",
+          "count": 9,
+          "avg_z_score": 1.8
+        },
+        {
+          "feature": "DRIVER'S DEMAND ENGIN - PERCENT TORQUE",
+          "count": 9,
+          "avg_z_score": 9.1
+        }
+      ]
+    }
+  },
+  "functional_tests_summary": {
+    "TC1": {
+      "description": "Standard sample upload",
+      "pass_fail": "PASS",
+      "evidence": "07_evidence/tc1_standard_upload.json"
+    },
+    "TC2": {
+      "description": "CAN-style sample upload",
+      "pass_fail": "PASS",
+      "evidence": "07_evidence/tc2_can_bus_upload.json"
+    },
+    "TC3": {
+      "description": "Invalid file upload",
+      "pass_fail": "PASS",
+      "evidence": "07_evidence/tc3_invalid_upload_response.json"
+    },
+    "TC4": {
+      "description": "Long-format dataset upload",
+      "pass_fail": "PASS",
+      "evidence": "07_evidence/tc4_telematics_upload.json"
+    },
+    "TC5": {
+      "description": "Stream playback",
+      "pass_fail": "PASS",
+      "evidence": "07_evidence/tc5_stream_playback_sample.json"
+    },
+    "TC6": {
+      "description": "Health-score response",
+      "pass_fail": "PASS",
+      "evidence": "07_evidence/tc6_health_score_simulation.json"
+    }
+  }
+}
